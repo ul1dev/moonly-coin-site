@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
-import { Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -371,7 +370,9 @@ const Index = () => {
           </div>
           <div className="mt-8 pt-8 border-t border-primary/10 text-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} CryptoMeme AI. 
+              © {new Date().getFullYear()} CryptoMeme AI
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
               {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
             </p>
           </div>
