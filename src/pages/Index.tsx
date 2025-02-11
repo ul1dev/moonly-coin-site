@@ -119,12 +119,21 @@ const Index = () => {
                 </button>
               ))}
             </nav>
-            <button
-              onClick={toggleLanguage}
-              className="px-3 py-1 rounded border border-primary/20 text-primary text-sm"
-            >
-              {language === 'en' ? 'RU' : 'EN'}
-            </button>
+            <div className="flex items-center gap-4">
+              <Button 
+                variant="outline" 
+                className="border-primary/20 text-primary hover:bg-primary/10"
+                onClick={() => scrollToSection('investment')}
+              >
+                {language === 'en' ? 'Invest' : 'Инвестировать'}
+              </Button>
+              <button
+                onClick={toggleLanguage}
+                className="px-3 py-1 rounded border border-primary/20 text-primary text-sm"
+              >
+                {language === 'en' ? 'RU' : 'EN'}
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -193,7 +202,7 @@ const Index = () => {
               {language === 'en' ? 'Investment Stages' : 'Этапы Инвестирования'}
             </h2>
             <p className="mt-4 text-gray-400">
-              {language === 'en' ? 'Strategic growth through planned investment phases - these are the amounts our investors will use to buy coins in phases to grow and increase capitalization' : 'Стратегический рост через запланированные этапы инв��стирования - это суммы, которые наши инвесторы будут использовать для покупки монет поэтапно для роста и увеличения капитализации'}
+              {language === 'en' ? 'Our investors will use to buy coins in phases to grow and increase capitalization' : 'Наши инвесторы будут использовать для покупки монет поэтапно для роста и увеличения капитализации'}
             </p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
@@ -242,7 +251,7 @@ const Index = () => {
                   </span>
                 </>
               ) : (
-                'Наш�� революционная криптовалюта полностью управляется передовой нейронн��й сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'
+                'На���� революционная криптовалюта полностью управляется передовой нейронн��й сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'
               )}
             </div>
           </motion.div>
