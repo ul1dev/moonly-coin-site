@@ -27,19 +27,22 @@ const investmentStages = [
   {
     title: "Initial Launch",
     description: "Early investor phase with guaranteed growth potential through strategic market positioning.",
-    investment: "300,000 RUB",
+    investmentUSD: "3,000 USD",
+    investmentRUB: "300,000 RUB",
     date: "Launch Phase",
   },
   {
     title: "Expansion Phase",
     description: "Major development milestone with increased AI capabilities and market presence.",
-    investment: "5,000,000 RUB",
+    investmentUSD: "50,000 USD",
+    investmentRUB: "5,000,000 RUB",
     date: "February 22, 2024",
   },
   {
     title: "Growth Acceleration",
     description: "Massive scaling phase with enhanced AI features and market dominance.",
-    investment: "25,000,000 RUB",
+    investmentUSD: "250,000 USD",
+    investmentRUB: "25,000,000 RUB",
     date: "March 8, 2024",
   },
 ];
@@ -177,8 +180,12 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white">Investment Stages</h2>
-            <p className="mt-4 text-gray-400">Strategic growth through planned investment phases</p>
+            <h2 className="text-4xl font-bold text-white">
+              {language === 'en' ? 'Investment Stages' : 'Этапы Инвестирования'}
+            </h2>
+            <p className="mt-4 text-gray-400">
+              {language === 'en' ? 'Strategic growth through planned investment phases' : 'Стратегический рост через запланированные этапы инвестирования'}
+            </p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             {investmentStages.map((stage, index) => (
@@ -187,13 +194,19 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg"
+                className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg h-[250px] flex flex-col justify-between"
               >
-                <div className="text-primary text-lg font-semibold mb-2">Stage {index + 1}</div>
-                <h3 className="text-xl font-bold text-white mb-4">{stage.title}</h3>
-                <p className="text-gray-400">{stage.description}</p>
-                <div className="mt-4 text-xl font-bold text-primary">{stage.investment}</div>
-                <div className="text-sm text-gray-500">{stage.date}</div>
+                <div>
+                  <div className="text-primary text-lg font-semibold mb-2">Stage {index + 1}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{stage.title}</h3>
+                  <p className="text-gray-400">{stage.description}</p>
+                </div>
+                <div>
+                  <div className="mt-4 text-xl font-bold text-primary">
+                    {language === 'en' ? stage.investmentUSD : stage.investmentRUB}
+                  </div>
+                  <div className="text-sm text-gray-500">{stage.date}</div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -208,15 +221,13 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl font-bold text-white">AI-Powered Future</h2>
+            <h2 className="text-4xl font-bold text-white">
+              {language === 'en' ? 'AI-Powered Future' : 'Будущее на базе ИИ'}
+            </h2>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-              Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations. When our market capitalization reaches $10 million, we'll secure major investments to make this AI technology accessible to all.
-            </p>
-            <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-              Every token purchase directly supports the development of groundbreaking AI technology in cryptocurrency trading. Our strategic investors are committed to ensuring substantial returns by actively supporting token value growth and rewarding early investors.
-            </p>
-            <p className="mt-4 text-primary font-semibold">
-              This is just the beginning of our journey to revolutionize cryptocurrency trading through artificial intelligence.
+              {language === 'en' 
+                ? 'Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations.'
+                : 'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'}
             </p>
           </motion.div>
         </div>
@@ -281,8 +292,12 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white">Join Our Community</h2>
-            <p className="mt-4 text-gray-400">Be part of the AI-driven crypto revolution</p>
+            <h2 className="text-4xl font-bold text-white">
+              {language === 'en' ? 'Join Our Community' : 'Присоединяйтесь к Сообществу'}
+            </h2>
+            <p className="mt-4 text-gray-400">
+              {language === 'en' ? 'Be part of the AI-driven crypto revolution' : 'Станьте частью крипто-революции на базе ИИ'}
+            </p>
           </motion.div>
           <div className="mt-12 flex justify-center gap-6">
             {socialLinks.map((link, index) => (
@@ -310,37 +325,44 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">CryptoMeme AI</h3>
               <p className="text-gray-400 text-sm">
-                Revolutionary AI-powered cryptocurrency platform
+                {language === 'en' 
+                  ? 'Revolutionary AI-powered cryptocurrency platform'
+                  : 'Революционная криптовалютная платформа на базе ИИ'}
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                {language === 'en' ? 'Legal' : 'Юридическая информация'}
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
-                    Privacy Policy
+                    {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
                   </a>
                 </li>
                 <li>
                   <a href="/terms" className="text-gray-400 hover:text-primary text-sm">
-                    Terms of Service
+                    {language === 'en' ? 'Terms of Service' : 'Условия использования'}
                   </a>
                 </li>
                 <li>
                   <a href="/disclaimer" className="text-gray-400 hover:text-primary text-sm">
-                    Risk Disclaimer
+                    {language === 'en' ? 'Risk Disclaimer' : 'Предупреждение о рисках'}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                {language === 'en' ? 'Contact' : 'Контакты'}
+              </h3>
               <p className="text-gray-400 text-sm">support@cryptomeme-ai.com</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-primary/10 text-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} CryptoMeme AI. All rights reserved.
+              © {new Date().getFullYear()} CryptoMeme AI. 
+              {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
             </p>
           </div>
         </div>
@@ -375,6 +397,26 @@ const progressCards: ProgressCard[] = [
     description: "Launch on decentralized exchanges for public trading",
     descriptionRu: "Запуск на децентрализованных биржах для публичной торговли",
     isCompleted: false,
+    date: "In Progress",
+    dateRu: "В процессе"
+  },
+  {
+    id: "stonfi",
+    title: "STON.fi Launch",
+    titleRu: "Запуск на STON.fi",
+    description: "Integration and listing on STON.fi platform",
+    descriptionRu: "Интеграция и листинг на платформе STON.fi",
+    isCompleted: false,
+    date: "Upcoming",
+    dateRu: "Скоро"
+  },
+  {
+    id: "bybit",
+    title: "ByBit Launch",
+    titleRu: "Запуск на ByBit",
+    description: "Official listing on ByBit exchange",
+    descriptionRu: "Официальный листинг на бирже ByBit",
+    isCompleted: false,
     date: "Upcoming",
     dateRu: "Скоро"
   },
@@ -385,8 +427,8 @@ const progressCards: ProgressCard[] = [
     description: "Finalizing our AI technology for optimal performance",
     descriptionRu: "Завершение разработки нашей технологии ИИ для оптимальной производительности",
     isCompleted: false,
-    date: "In Progress",
-    dateRu: "В процессе"
+    date: "Planned",
+    dateRu: "Запланировано"
   },
   {
     id: "ai-adaptation",
@@ -414,26 +456,6 @@ const progressCards: ProgressCard[] = [
     titleRu: "Создание Экосистемы",
     description: "Building integrated ecosystem with our services and coin",
     descriptionRu: "Создание интегрированной экосистемы с нашими сервисами и монетой",
-    isCompleted: false,
-    date: "Planned",
-    dateRu: "Запланировано"
-  },
-  {
-    id: "stonfi",
-    title: "STON.fi Launch",
-    titleRu: "Запуск на STON.fi",
-    description: "Integration and listing on STON.fi platform",
-    descriptionRu: "Интеграция и листинг на платформе STON.fi",
-    isCompleted: false,
-    date: "Planned",
-    dateRu: "Запланировано"
-  },
-  {
-    id: "bybit",
-    title: "ByBit Launch",
-    titleRu: "Запуск на ByBit",
-    description: "Official listing on ByBit exchange",
-    descriptionRu: "Официальный листинг на бирже ByBit",
     isCompleted: false,
     date: "Planned",
     dateRu: "Запланировано"
