@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube, TikTok } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -476,6 +476,10 @@ const socialLinks = [
   {
     url: "https://youtube.com",
     icon: <Youtube className="h-6 w-6 text-primary" />,
+  },
+  {
+    url: "https://tiktok.com",
+    icon: <TikTok className="h-6 w-6 text-primary" />,
   },
 ];
 
