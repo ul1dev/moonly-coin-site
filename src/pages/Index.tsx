@@ -227,7 +227,7 @@ const Index = () => {
             </h2>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
               {language === 'en' 
-                ? 'Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations.'
+                ? 'Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations. When our market capitalization reaches $10 million, we\'ll secure major investments to make this AI technology accessible to all.\n\nEvery token purchase directly supports the development of groundbreaking AI technology in cryptocurrency trading. Our strategic investors are committed to ensuring substantial returns by actively supporting token value growth and rewarding early investors.\n\nThis is just the beginning of our journey to revolutionize cryptocurrency trading through artificial intelligence.'
                 : 'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'}
             </p>
           </motion.div>
@@ -465,11 +465,6 @@ const progressCards: ProgressCard[] = [
   }
 ];
 
-const tiktokIcon = {
-  path: `M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.066 9.645c.183 2.055.889 4.479 3.679 4.779v3.309c-1.674.229-3.111-.492-4.246-1.262v5.263c0 6.869-7.738 9.122-10.82 4.149-2.021-3.255-.377-9.401 5.844-9.401v3.459c-.386-.082-.779-.139-1.172-.139-2.459 0-3.459 2.549-2.049 4.181 1.434 1.639 5.217.819 5.217-3.181V4.859h3.546c.184 2.238.904 3.681 3.682 3.681v3.309c-1.674.23-3.111-.491-4.246-1.262v5.263l.565-6.204z`,
-  size: 24
-};
-
 const socialLinks = [
   {
     url: "https://twitter.com",
@@ -482,20 +477,6 @@ const socialLinks = [
   {
     url: "https://youtube.com",
     icon: <Youtube className="h-6 w-6 text-primary" />,
-  },
-  {
-    url: "https://tiktok.com",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        width="24"
-        height="24"
-        className="h-6 w-6 text-primary"
-        fill="currentColor"
-      >
-        <path d={tiktokIcon.path} />
-      </svg>
-    ),
   },
 ];
 
