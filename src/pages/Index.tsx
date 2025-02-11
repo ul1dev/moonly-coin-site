@@ -121,8 +121,8 @@ const Index = () => {
             </nav>
             <div className="flex items-center gap-4">
               <Button 
-                variant="outline" 
-                className="border-primary/20 text-primary hover:bg-primary/10"
+                size="lg"
+                className="bg-primary hover:bg-primary-dark"
                 onClick={() => scrollToSection('investment')}
               >
                 {language === 'en' ? 'Invest' : 'Инвестировать'}
@@ -202,7 +202,7 @@ const Index = () => {
               {language === 'en' ? 'Investment Stages' : 'Этапы Инвестирования'}
             </h2>
             <p className="mt-4 text-gray-400">
-              {language === 'en' ? 'Our investors will use to buy coins in phases to grow and increase capitalization' : 'Наши инвесторы будут использовать для покупки монет поэтапно для роста и увеличения капитализации'}
+              {language === 'en' ? 'Our investors will use to buy coins in phases to grow and increase capitalization' : 'Наши инвестора будут поэтапно закупать монету на эти суммы для роста и увеличения капитализации'}
             </p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
