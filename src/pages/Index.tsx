@@ -1,11 +1,19 @@
+
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, MessageCircle, GithubIcon } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, GithubIcon, Brain, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0A0A0F] text-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20" />
+        <div className="absolute inset-0 backdrop-blur-3xl">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+        </div>
+        
         <div className="container mx-auto px-4 z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -13,27 +21,29 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              Welcome to the Future of Meme Finance
+            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+              <Brain className="h-4 w-4" /> Powered by Advanced AI Technology
             </span>
-            <h1 className="mt-6 text-6xl md:text-7xl font-bold text-text">
-              CryptoMeme
+            <h1 className="mt-6 text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary">
+              CryptoMeme AI
             </h1>
-            <p className="mt-6 text-xl text-text-light max-w-2xl mx-auto">
-              Join our community-driven journey to revolutionize the meme economy through blockchain technology.
+            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+              The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies.
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button className="bg-primary hover:bg-primary-dark">
                 <RocketIcon className="mr-2 h-4 w-4" />
-                Get Started
+                Invest Now
               </Button>
-              <Button variant="outline">Learn More</Button>
+              <Button variant="outline" className="border-primary/20 text-primary hover:bg-primary/10">
+                Learn More
+              </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-primary/5">
+      <section className="py-20 bg-[#0D0D12]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -41,30 +51,52 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-text">Development Roadmap</h2>
-            <p className="mt-4 text-text-light">Our journey to the moon, mapped out for success</p>
+            <h2 className="text-4xl font-bold text-white">Investment Stages</h2>
+            <p className="mt-4 text-gray-400">Strategic growth through planned investment phases</p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
-            {roadmapItems.map((item, index) => (
+            {investmentStages.map((stage, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg"
+                className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg"
               >
-                <div className="text-primary text-lg font-semibold mb-2">
-                  Phase {index + 1}
-                </div>
-                <h3 className="text-xl font-bold text-text mb-4">{item.title}</h3>
-                <p className="text-text-light">{item.description}</p>
+                <div className="text-primary text-lg font-semibold mb-2">Stage {index + 1}</div>
+                <h3 className="text-xl font-bold text-white mb-4">{stage.title}</h3>
+                <p className="text-gray-400">{stage.description}</p>
+                <div className="mt-4 text-xl font-bold text-primary">{stage.investment}</div>
+                <div className="text-sm text-gray-500">{stage.date}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#0A0A0F]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold text-white">AI-Powered Future</h2>
+            <p className="mt-6 text-lg text-gray-300 leading-relaxed">
+              Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations. When our market capitalization reaches $10 million, we'll secure major investments to make this AI technology accessible to all.
+            </p>
+            <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+              Every token purchase directly supports the development of groundbreaking AI technology in cryptocurrency trading. Our strategic investors are committed to ensuring substantial returns by actively supporting token value growth and rewarding early investors.
+            </p>
+            <p className="mt-4 text-primary font-semibold">
+              This is just the beginning of our journey to revolutionize cryptocurrency trading through artificial intelligence.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#0D0D12]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -72,8 +104,8 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-text">Join Our Community</h2>
-            <p className="mt-4 text-text-light">Connect with us across our social platforms</p>
+            <h2 className="text-4xl font-bold text-white">Join Our Community</h2>
+            <p className="mt-4 text-gray-400">Be part of the AI-driven crypto revolution</p>
           </motion.div>
           <div className="mt-12 flex justify-center gap-6">
             {socialLinks.map((link, index) => (
@@ -86,7 +118,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 bg-white rounded-full shadow-lg"
+                className="p-4 bg-[#12121A] rounded-full shadow-lg border border-primary/10"
               >
                 {link.icon}
               </motion.a>
@@ -94,41 +126,28 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <section className="py-20 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="text-4xl font-bold text-text">Our Story</h2>
-            <p className="mt-6 text-lg text-text-light leading-relaxed">
-              Born from the convergence of humor and innovation, CryptoMeme represents more than just another cryptocurrency. We believe in the power of community-driven development and the potential of memes to revolutionize how we think about digital assets.
-            </p>
-            <p className="mt-4 text-lg text-text-light leading-relaxed">
-              Our mission is to create a sustainable, engaging, and valuable ecosystem that benefits all participants while maintaining the fun and inclusive nature of meme culture.
-            </p>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
 
-const roadmapItems = [
+const investmentStages = [
   {
-    title: "Launch & Community Building",
-    description: "Initial token launch, community establishment, and social media presence development.",
+    title: "Initial Launch",
+    description: "Early investor phase with guaranteed growth potential through strategic market positioning.",
+    investment: "300,000 RUB",
+    date: "Launch Phase",
   },
   {
-    title: "Platform Development",
-    description: "Development of core features, security audits, and partnership formations.",
+    title: "Expansion Phase",
+    description: "Major development milestone with increased AI capabilities and market presence.",
+    investment: "5,000,000 RUB",
+    date: "February 22, 2024",
   },
   {
-    title: "Ecosystem Expansion",
-    description: "Integration with major platforms, additional features, and community governance implementation.",
+    title: "Growth Acceleration",
+    description: "Massive scaling phase with enhanced AI features and market dominance.",
+    investment: "25,000,000 RUB",
+    date: "March 8, 2024",
   },
 ];
 
