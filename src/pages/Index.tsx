@@ -1,13 +1,66 @@
-
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, MessageCircle, GithubIcon, Brain, TrendingUp, Users } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube, TikTok } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+
+interface ProgressCard {
+  id: string;
+  title: string;
+  description: string;
+  isCompleted: boolean;
+  date?: string;
+}
+
+interface NavItem {
+  label: {
+    en: string;
+    ru: string;
+  };
+  href: string;
+}
 
 const Index = () => {
+  const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'ru' : 'en');
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#0A0A0F] text-white">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="text-primary font-bold">CryptoMeme AI</div>
+            <nav className="hidden md:flex items-center space-x-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-sm text-gray-300 hover:text-primary transition-colors"
+                >
+                  {language === 'en' ? item.label.en : item.label.ru}
+                </button>
+              ))}
+            </nav>
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1 rounded border border-primary/20 text-primary text-sm"
+            >
+              {language === 'en' ? 'RU' : 'EN'}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20" />
         <div className="absolute inset-0 backdrop-blur-3xl">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
@@ -43,7 +96,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#0D0D12]">
+      <section id="investment" className="py-20 bg-[#0D0D12]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -74,7 +127,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#0A0A0F]">
+      <section id="ai-future" className="py-20 bg-[#0A0A0F]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -96,7 +149,48 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#0D0D12]">
+      <section id="progress" className="py-20 bg-[#0D0D12]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold text-white">Development Progress</h2>
+            <p className="mt-4 text-gray-400">Track our journey to success</p>
+          </motion.div>
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {progressCards.map((card, index) => (
+              <motion.div
+                key={card.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="bg-[#12121A] border-primary/10 p-6">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
+                      <p className="text-gray-400">{card.description}</p>
+                      {card.date && (
+                        <p className="text-sm text-primary mt-2">{card.date}</p>
+                      )}
+                    </div>
+                    {card.isCompleted && (
+                      <span className="bg-primary/10 p-2 rounded-full">
+                        <Check className="h-4 w-4 text-primary" />
+                      </span>
+                    )}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="community" className="py-20 bg-[#0A0A0F]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -126,29 +220,96 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <footer className="bg-[#0D0D12] border-t border-primary/10">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">CryptoMeme AI</h3>
+              <p className="text-gray-400 text-sm">
+                Revolutionary AI-powered cryptocurrency platform
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-gray-400 hover:text-primary text-sm">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="/disclaimer" className="text-gray-400 hover:text-primary text-sm">
+                    Risk Disclaimer
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+              <p className="text-gray-400 text-sm">support@cryptomeme-ai.com</p>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-primary/10 text-center">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} CryptoMeme AI. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
 
-const investmentStages = [
+const navItems: NavItem[] = [
+  { label: { en: "Home", ru: "Главная" }, href: "hero" },
+  { label: { en: "Investment", ru: "Инвестиции" }, href: "investment" },
+  { label: { en: "AI Future", ru: "Будущее ИИ" }, href: "ai-future" },
+  { label: { en: "Progress", ru: "Прогресс" }, href: "progress" },
+  { label: { en: "Community", ru: "Сообщество" }, href: "community" },
+];
+
+const progressCards: ProgressCard[] = [
   {
-    title: "Initial Launch",
-    description: "Early investor phase with guaranteed growth potential through strategic market positioning.",
-    investment: "300,000 RUB",
-    date: "Launch Phase",
+    id: "coin-creation",
+    title: "Coin Creation",
+    description: "Development and deployment of the initial smart contract",
+    isCompleted: true,
+    date: "Completed"
   },
   {
-    title: "Expansion Phase",
-    description: "Major development milestone with increased AI capabilities and market presence.",
-    investment: "5,000,000 RUB",
-    date: "February 22, 2024",
+    id: "dex-release",
+    title: "DEX Release",
+    description: "Launch on decentralized exchanges for public trading",
+    isCompleted: false,
+    date: "Upcoming"
   },
   {
-    title: "Growth Acceleration",
-    description: "Massive scaling phase with enhanced AI features and market dominance.",
-    investment: "25,000,000 RUB",
-    date: "March 8, 2024",
+    id: "marketing",
+    title: "Marketing Campaign",
+    description: "Active promotion and community reward programs",
+    isCompleted: false,
+    date: "In Progress"
   },
+  {
+    id: "stonfi",
+    title: "STON.fi Launch",
+    description: "Integration and listing on STON.fi platform",
+    isCompleted: false,
+    date: "Planned"
+  },
+  {
+    id: "bybit",
+    title: "ByBit Launch",
+    description: "Official listing on ByBit exchange",
+    isCompleted: false,
+    date: "Planned"
+  }
 ];
 
 const socialLinks = [
@@ -161,8 +322,12 @@ const socialLinks = [
     icon: <MessageCircle className="h-6 w-6 text-primary" />,
   },
   {
-    url: "https://github.com",
-    icon: <GithubIcon className="h-6 w-6 text-primary" />,
+    url: "https://tiktok.com",
+    icon: <TikTok className="h-6 w-6 text-primary" />,
+  },
+  {
+    url: "https://youtube.com",
+    icon: <Youtube className="h-6 w-6 text-primary" />,
   },
 ];
 
