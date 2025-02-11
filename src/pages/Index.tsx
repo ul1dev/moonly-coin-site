@@ -193,7 +193,7 @@ const Index = () => {
               {language === 'en' ? 'Investment Stages' : 'Этапы Инвестирования'}
             </h2>
             <p className="mt-4 text-gray-400">
-              {language === 'en' ? 'Strategic growth through planned investment phases' : 'Стратегический рост через запланированные этапы инвестирования'}
+              {language === 'en' ? 'Strategic growth through planned investment phases - these are the amounts our investors will use to buy coins' : 'Стратегический рост через запланированные этапы инв��стирования - это суммы, которые наши инвесторы будут использовать для покупки монет'}
             </p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
