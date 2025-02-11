@@ -203,15 +203,15 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg h-[250px] flex flex-col justify-between"
+                className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg min-h-[300px] flex flex-col justify-between"
               >
-                <div>
+                <div className="flex-1">
                   <div className="text-primary text-lg font-semibold mb-2">Stage {index + 1}</div>
-                  <h3 className="text-xl font-bold text-white mb-4">{language === 'en' ? stage.title : stage.titleRu}</h3>
-                  <p className="text-gray-400">{language === 'en' ? stage.description : stage.descriptionRu}</p>
+                  <h3 className="text-xl font-bold text-white mb-4 line-clamp-2">{language === 'en' ? stage.title : stage.titleRu}</h3>
+                  <p className="text-gray-400 line-clamp-4">{language === 'en' ? stage.description : stage.descriptionRu}</p>
                 </div>
-                <div>
-                  <div className="mt-4 text-xl font-bold text-primary">
+                <div className="mt-4">
+                  <div className="text-xl font-bold text-primary">
                     {language === 'en' ? stage.investmentUSD : stage.investmentRUB}
                   </div>
                   <div className="text-sm text-gray-500">{language === 'en' ? stage.date : stage.dateRu}</div>
