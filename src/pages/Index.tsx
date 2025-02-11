@@ -182,7 +182,7 @@ const Index = () => {
                 <RocketIcon className="mr-2 h-4 w-4" />
                 {language === 'en' ? 'Invest Now' : 'Инвестировать'}
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-primary/10" onClick={() => scrollToSection('ai-future')}>
+              <Button size="lg" variant="outline" className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5">
                 {language === 'en' ? 'Learn More' : 'Узнать больше'}
               </Button>
             </div>
@@ -479,7 +479,7 @@ const progressCards: ProgressCard[] = [
     title: "AI Adaptation",
     titleRu: "Адаптация ИИ",
     description: "Adapting AI technology for user-friendly interface",
-    descriptionRu: "Адаптация технологии ИИ для удобного пользовательского интерфейса",
+    descriptionRu: "Адаптация технологии ИИ для удобного пользова��ельского интерфейса",
     isCompleted: false,
     date: "Planned",
     dateRu: "Запланировано"
