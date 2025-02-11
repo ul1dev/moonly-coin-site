@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
@@ -56,6 +55,19 @@ const Index = () => {
     }
   };
 
+  const coinVariants = {
+    initial: { opacity: 0, scale: 0 },
+    animate: { 
+      opacity: [0.5, 1, 0.5],
+      scale: 1,
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#0A0A0F] text-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
@@ -83,35 +95,53 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20" />
-        <div className="absolute inset-0 backdrop-blur-3xl">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-32">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/20 to-primary/10" />
+          <div className="absolute inset-0 backdrop-blur-[100px]" />
+          
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 40 + 20}px`,
+                height: `${Math.random() * 40 + 20}px`,
+                background: 'linear-gradient(45deg, #9b87f5, #7E69AB)',
+                borderRadius: '50%',
+              }}
+              variants={coinVariants}
+              initial="initial"
+              animate="animate"
+              custom={i}
+            />
+          ))}
         </div>
         
-        <div className="container mx-auto px-4 z-10">
+        <div className="container relative mx-auto px-4 z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2 backdrop-blur-sm">
               <Brain className="h-4 w-4" /> Powered by Advanced AI Technology
             </span>
-            <h1 className="mt-6 text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary">
+            <h1 className="mt-6 text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary tracking-tight leading-tight">
               CryptoMeme AI
             </h1>
-            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="mt-6 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button className="bg-primary hover:bg-primary-dark">
+              <Button size="lg" className="bg-primary hover:bg-primary-dark">
                 <RocketIcon className="mr-2 h-4 w-4" />
                 Invest Now
               </Button>
-              <Button variant="outline" className="border-primary/20 text-primary hover:bg-primary/10">
+              <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-primary/10">
                 Learn More
               </Button>
             </div>
