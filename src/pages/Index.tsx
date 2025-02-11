@@ -126,15 +126,7 @@ const Index = () => {
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
                 <RocketIcon className="mr-2 h-4 w-4" />
-                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5"
-                onClick={() => scrollToSection('ai-future')}
-              >
-                {language === 'en' ? 'Learn More' : 'Узнать больше'}
+                {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <button
                 onClick={toggleLanguage}
@@ -193,7 +185,7 @@ const Index = () => {
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
                 <RocketIcon className="mr-2 h-4 w-4" />
-                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
+                {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <Button 
                 size="lg" 
@@ -272,7 +264,7 @@ const Index = () => {
                 <>
                   {'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций. Когда наша рыночная капитализация достигнет $10 миллионов, мы обеспечим крупные инвестиции, чтобы сделать эту технологию ИИ доступной для всех.\n\nКаждая покупка токенов напрямую поддерживает разработку революционной технологии ИИ в криптовалютной торговле. Наши стратегические инвесторы намерены обеспечить существенную прибыль, активно поддерживая рост стоимости токенов и вознаграждая ранних инвесторов.\n\n'}
                   <span className="text-primary font-medium">
-                    Это только начало нашего пути к революции в криптотрейдинге с помощью искусственного интеллекта.
+                    Это только начало нашего пути к революции в крипто-революции на базе ИИ.
                   </span>
                 </>
               )}
@@ -387,7 +379,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li>
                   <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
-                    {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
+                    {language === 'en' ? 'Privacy Policy' : 'Политика ��онфиденциальности'}
                   </a>
                 </li>
                 <li>
