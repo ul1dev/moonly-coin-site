@@ -242,7 +242,7 @@ const Index = () => {
                   </span>
                 </>
               ) : (
-                'Наша революционная криптовалюта полностью управляется передовой нейронн��й сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'
+                'Наш�� революционная криптовалюта полностью управляется передовой нейронн��й сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'
               )}
             </div>
           </motion.div>
@@ -416,6 +416,16 @@ const progressCards: ProgressCard[] = [
     titleRu: "Релиз на DEX",
     description: "Launch on decentralized exchanges for public trading",
     descriptionRu: "Запуск на децентрализованных биржах для публичной торговли",
+    isCompleted: false,
+    date: "In Progress",
+    dateRu: "В процессе"
+  },
+  {
+    id: "social-promotion",
+    title: "Social Media Promotion",
+    titleRu: "Продвижение в Соцсетях",
+    description: "Actively promote the coin on social media",
+    descriptionRu: "Активное продвижение монеты в социальных сетях",
     isCompleted: false,
     date: "In Progress",
     dateRu: "В процессе"
