@@ -1,5 +1,7 @@
+
+import React from 'react';
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube, TikTok } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -18,6 +20,27 @@ interface NavItem {
   };
   href: string;
 }
+
+const investmentStages = [
+  {
+    title: "Initial Launch",
+    description: "Early investor phase with guaranteed growth potential through strategic market positioning.",
+    investment: "300,000 RUB",
+    date: "Launch Phase",
+  },
+  {
+    title: "Expansion Phase",
+    description: "Major development milestone with increased AI capabilities and market presence.",
+    investment: "5,000,000 RUB",
+    date: "February 22, 2024",
+  },
+  {
+    title: "Growth Acceleration",
+    description: "Massive scaling phase with enhanced AI features and market dominance.",
+    investment: "25,000,000 RUB",
+    date: "March 8, 2024",
+  },
+];
 
 const Index = () => {
   const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
@@ -320,10 +343,6 @@ const socialLinks = [
   {
     url: "https://t.me",
     icon: <MessageCircle className="h-6 w-6 text-primary" />,
-  },
-  {
-    url: "https://tiktok.com",
-    icon: <TikTok className="h-6 w-6 text-primary" />,
   },
   {
     url: "https://youtube.com",
