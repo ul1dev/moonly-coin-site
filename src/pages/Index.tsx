@@ -26,24 +26,33 @@ interface NavItem {
 const investmentStages = [
   {
     title: "Initial Launch",
+    titleRu: "Начальный Запуск",
     description: "Early investor phase with guaranteed growth potential through strategic market positioning.",
+    descriptionRu: "Фаза ранних инвесторов с гарантированным потенциалом роста через стратегическое позиционирование на рынке.",
     investmentUSD: "3,000 USD",
     investmentRUB: "300,000 RUB",
     date: "Launch Phase",
+    dateRu: "Фаза Запуска",
   },
   {
     title: "Expansion Phase",
+    titleRu: "Фаза Расширения",
     description: "Major development milestone with increased AI capabilities and market presence.",
+    descriptionRu: "Важный этап развития с расширенными возможностями ИИ и присутствием на рынке.",
     investmentUSD: "50,000 USD",
     investmentRUB: "5,000,000 RUB",
     date: "February 22, 2024",
+    dateRu: "22 февраля 2024",
   },
   {
     title: "Growth Acceleration",
+    titleRu: "Ускорение Роста",
     description: "Massive scaling phase with enhanced AI features and market dominance.",
+    descriptionRu: "Фаза масштабного роста с улучшенными функциями ИИ и доминированием на рынке.",
     investmentUSD: "250,000 USD",
     investmentRUB: "25,000,000 RUB",
     date: "March 8, 2024",
+    dateRu: "8 марта 2024",
   },
 ];
 
@@ -198,14 +207,14 @@ const Index = () => {
               >
                 <div>
                   <div className="text-primary text-lg font-semibold mb-2">Stage {index + 1}</div>
-                  <h3 className="text-xl font-bold text-white mb-4">{stage.title}</h3>
-                  <p className="text-gray-400">{stage.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{language === 'en' ? stage.title : stage.titleRu}</h3>
+                  <p className="text-gray-400">{language === 'en' ? stage.description : stage.descriptionRu}</p>
                 </div>
                 <div>
                   <div className="mt-4 text-xl font-bold text-primary">
                     {language === 'en' ? stage.investmentUSD : stage.investmentRUB}
                   </div>
-                  <div className="text-sm text-gray-500">{stage.date}</div>
+                  <div className="text-sm text-gray-500">{language === 'en' ? stage.date : stage.dateRu}</div>
                 </div>
               </motion.div>
             ))}
