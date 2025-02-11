@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube, TikTok } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
+import { Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -464,6 +465,11 @@ const progressCards: ProgressCard[] = [
   }
 ];
 
+const tiktokIcon = {
+  path: `M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.066 9.645c.183 2.055.889 4.479 3.679 4.779v3.309c-1.674.229-3.111-.492-4.246-1.262v5.263c0 6.869-7.738 9.122-10.82 4.149-2.021-3.255-.377-9.401 5.844-9.401v3.459c-.386-.082-.779-.139-1.172-.139-2.459 0-3.459 2.549-2.049 4.181 1.434 1.639 5.217.819 5.217-3.181V4.859h3.546c.184 2.238.904 3.681 3.682 3.681v3.309c-1.674.23-3.111-.491-4.246-1.262v5.263l.565-6.204z`,
+  size: 24
+};
+
 const socialLinks = [
   {
     url: "https://twitter.com",
@@ -479,7 +485,17 @@ const socialLinks = [
   },
   {
     url: "https://tiktok.com",
-    icon: <TikTok className="h-6 w-6 text-primary" />,
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        className="h-6 w-6 text-primary"
+        fill="currentColor"
+      >
+        <path d={tiktokIcon.path} />
+      </svg>
+    ),
   },
 ];
 
