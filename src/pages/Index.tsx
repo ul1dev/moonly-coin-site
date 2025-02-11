@@ -225,11 +225,18 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-white">
               {language === 'en' ? 'AI-Powered Future' : 'Будущее на базе ИИ'}
             </h2>
-            <p className="mt-6 text-gray-300 leading-relaxed whitespace-pre-line">
-              {language === 'en' 
-                ? 'Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations. When our market capitalization reaches $10 million, we\'ll secure major investments to make this AI technology accessible to all.\n\nEvery token purchase directly supports the development of groundbreaking AI technology in cryptocurrency trading. Our strategic investors are committed to ensuring substantial returns by actively supporting token value growth and rewarding early investors.\n\nThis is just the beginning of our journey to revolutionize cryptocurrency trading through artificial intelligence.'
-                : 'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'}
-            </p>
+            <div className="mt-6 text-lg text-gray-300 leading-relaxed whitespace-pre-line">
+              {language === 'en' ? (
+                <>
+                  {'Our revolutionary cryptocurrency is entirely managed by an advanced neural network, developed by our team to automate and optimize cryptocurrency operations. When our market capitalization reaches $10 million, we\'ll secure major investments to make this AI technology accessible to all.\n\nEvery token purchase directly supports the development of groundbreaking AI technology in cryptocurrency trading. Our strategic investors are committed to ensuring substantial returns by actively supporting token value growth and rewarding early investors.\n\n'}
+                  <span className="text-primary font-medium">
+                    This is just the beginning of our journey to revolutionize cryptocurrency trading through artificial intelligence.
+                  </span>
+                </>
+              ) : (
+                'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций.'
+              )}
+            </div>
           </motion.div>
         </div>
       </section>
