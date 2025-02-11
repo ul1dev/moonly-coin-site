@@ -256,15 +256,17 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#12121A] border-primary/10 p-6">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        {language === 'en' ? card.title : card.titleRu}
-                      </h3>
-                      <p className="text-gray-400">
-                        {language === 'en' ? card.description : card.descriptionRu}
-                      </p>
+                <Card className="bg-[#12121A] border-primary/10 p-6 h-[200px] flex flex-col">
+                  <div className="flex items-start justify-between flex-1">
+                    <div className="flex flex-col justify-between h-full">
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {language === 'en' ? card.title : card.titleRu}
+                        </h3>
+                        <p className="text-gray-400">
+                          {language === 'en' ? card.description : card.descriptionRu}
+                        </p>
+                      </div>
                       {card.date && (
                         <p className="text-sm text-primary mt-2">
                           {language === 'en' ? card.date : card.dateRu}
@@ -272,7 +274,7 @@ const Index = () => {
                       )}
                     </div>
                     {card.isCompleted && (
-                      <span className="bg-primary/10 p-2 rounded-full">
+                      <span className="bg-primary/10 p-2 rounded-full shrink-0">
                         <Check className="h-4 w-4 text-primary" />
                       </span>
                     )}
