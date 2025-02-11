@@ -7,9 +7,12 @@ import { Card } from "@/components/ui/card";
 interface ProgressCard {
   id: string;
   title: string;
+  titleRu: string;
   description: string;
+  descriptionRu: string;
   isCompleted: boolean;
   date?: string;
+  dateRu?: string;
 }
 
 interface NavItem {
@@ -41,8 +44,40 @@ const investmentStages = [
   },
 ];
 
+const dotVariants = {
+  initial: { 
+    opacity: 0,
+    scale: 0.5,
+  },
+  animate: { 
+    opacity: [0, 1, 0],
+    scale: [0.5, 1.2, 0.5],
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut"
+    }
+  }
+};
+
 const Index = () => {
   const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
+  const [dots, setDots] = React.useState<Array<{ id: number; x: number; y: number }>>([]);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const newDot = {
+        id: Math.random(),
+        x: Math.random() * 100,
+        y: Math.random() * 100
+      };
+      setDots(prev => [...prev, newDot]);
+      setTimeout(() => {
+        setDots(prev => prev.filter(dot => dot.id !== newDot.id));
+      }, 1500);
+    }, 200);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'ru' : 'en');
@@ -52,19 +87,6 @@ const Index = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const coinVariants = {
-    initial: { opacity: 0, scale: 0 },
-    animate: { 
-      opacity: [0.5, 1, 0.5],
-      scale: 1,
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
     }
   };
 
@@ -95,27 +117,22 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-32">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-32 md:py-40">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/20 to-primary/10" />
-          <div className="absolute inset-0 backdrop-blur-[100px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F] via-purple-900/10 to-[#0A0A0F]" />
+          <div className="absolute inset-0 backdrop-blur-[50px]" />
           
-          {[...Array(6)].map((_, i) => (
+          {dots.map((dot) => (
             <motion.div
-              key={i}
-              className="absolute"
+              key={dot.id}
+              className="absolute w-2 h-2 rounded-full bg-primary/50"
               style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 40 + 20}px`,
-                height: `${Math.random() * 40 + 20}px`,
-                background: 'linear-gradient(45deg, #9b87f5, #7E69AB)',
-                borderRadius: '50%',
+                top: `${dot.y}%`,
+                left: `${dot.x}%`,
               }}
-              variants={coinVariants}
+              variants={dotVariants}
               initial="initial"
               animate="animate"
-              custom={i}
             />
           ))}
         </div>
@@ -128,21 +145,24 @@ const Index = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2 backdrop-blur-sm">
-              <Brain className="h-4 w-4" /> Powered by Advanced AI Technology
+              <Brain className="h-4 w-4" />
+              {language === 'en' ? 'Powered by Advanced AI Technology' : 'На основе передовых технологий ИИ'}
             </span>
-            <h1 className="mt-6 text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary tracking-tight leading-tight">
+            <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary tracking-tight leading-[1.2]">
               CryptoMeme AI
             </h1>
-            <p className="mt-6 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies.
+            <p className="mt-8 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              {language === 'en' 
+                ? "The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies."
+                : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью передовых нейронных сетей и автоматизированных торговых стратегий."}
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary-dark">
                 <RocketIcon className="mr-2 h-4 w-4" />
-                Invest Now
+                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
               </Button>
               <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-primary/10">
-                Learn More
+                {language === 'en' ? 'Learn More' : 'Узнать больше'}
               </Button>
             </div>
           </motion.div>
@@ -210,8 +230,12 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white">Development Progress</h2>
-            <p className="mt-4 text-gray-400">Track our journey to success</p>
+            <h2 className="text-4xl font-bold text-white">
+              {language === 'en' ? 'Development Progress' : 'Процесс Разработки'}
+            </h2>
+            <p className="mt-4 text-gray-400">
+              {language === 'en' ? 'Track our journey to success' : 'Следите за нашим путем к успеху'}
+            </p>
           </motion.div>
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {progressCards.map((card, index) => (
@@ -224,10 +248,16 @@ const Index = () => {
                 <Card className="bg-[#12121A] border-primary/10 p-6">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
-                      <p className="text-gray-400">{card.description}</p>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {language === 'en' ? card.title : card.titleRu}
+                      </h3>
+                      <p className="text-gray-400">
+                        {language === 'en' ? card.description : card.descriptionRu}
+                      </p>
                       {card.date && (
-                        <p className="text-sm text-primary mt-2">{card.date}</p>
+                        <p className="text-sm text-primary mt-2">
+                          {language === 'en' ? card.date : card.dateRu}
+                        </p>
                       )}
                     </div>
                     {card.isCompleted && (
@@ -331,37 +361,82 @@ const progressCards: ProgressCard[] = [
   {
     id: "coin-creation",
     title: "Coin Creation",
+    titleRu: "Создание Монеты",
     description: "Development and deployment of the initial smart contract",
+    descriptionRu: "Разработка и развертывание первоначального смарт-контракта",
     isCompleted: true,
-    date: "Completed"
+    date: "Completed",
+    dateRu: "Завершено"
   },
   {
     id: "dex-release",
     title: "DEX Release",
+    titleRu: "Релиз на DEX",
     description: "Launch on decentralized exchanges for public trading",
+    descriptionRu: "Запуск на децентрализованных биржах для публичной торговли",
     isCompleted: false,
-    date: "Upcoming"
+    date: "Upcoming",
+    dateRu: "Скоро"
   },
   {
-    id: "marketing",
-    title: "Marketing Campaign",
-    description: "Active promotion and community reward programs",
+    id: "ai-finalization",
+    title: "AI Finalization",
+    titleRu: "Доработка ИИ",
+    description: "Finalizing our AI technology for optimal performance",
+    descriptionRu: "Завершение разработки нашей технологии ИИ для оптимальной производительности",
     isCompleted: false,
-    date: "In Progress"
+    date: "In Progress",
+    dateRu: "В процессе"
+  },
+  {
+    id: "ai-adaptation",
+    title: "AI Adaptation",
+    titleRu: "Адаптация ИИ",
+    description: "Adapting AI technology for user-friendly interface",
+    descriptionRu: "Адаптация технологии ИИ для удобного пользовательского интерфейса",
+    isCompleted: false,
+    date: "Planned",
+    dateRu: "Запланировано"
+  },
+  {
+    id: "ai-release",
+    title: "AI Mass Release",
+    titleRu: "Массовый Релиз ИИ",
+    description: "Making AI technology available for mass audience",
+    descriptionRu: "Предоставление технологии ИИ для массовой аудитории",
+    isCompleted: false,
+    date: "Planned",
+    dateRu: "Запланировано"
+  },
+  {
+    id: "ecosystem",
+    title: "Ecosystem Creation",
+    titleRu: "Создание Экосистемы",
+    description: "Building integrated ecosystem with our services and coin",
+    descriptionRu: "Создание интегрированной экосистемы с нашими сервисами и монетой",
+    isCompleted: false,
+    date: "Planned",
+    dateRu: "Запланировано"
   },
   {
     id: "stonfi",
     title: "STON.fi Launch",
+    titleRu: "Запуск на STON.fi",
     description: "Integration and listing on STON.fi platform",
+    descriptionRu: "Интеграция и листинг на платформе STON.fi",
     isCompleted: false,
-    date: "Planned"
+    date: "Planned",
+    dateRu: "Запланировано"
   },
   {
     id: "bybit",
     title: "ByBit Launch",
+    titleRu: "Запуск на ByBit",
     description: "Official listing on ByBit exchange",
+    descriptionRu: "Официальный листинг на бирже ByBit",
     isCompleted: false,
-    date: "Planned"
+    date: "Planned",
+    dateRu: "Запланировано"
   }
 ];
 
