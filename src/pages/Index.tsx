@@ -121,10 +121,11 @@ const Index = () => {
             </nav>
             <div className="flex items-center gap-4">
               <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary-dark"
+                size="lg" 
+                className="bg-primary hover:bg-primary-dark text-lg px-10 py-6"
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
+                <RocketIcon className="h-5 w-5" />
                 {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <button
@@ -180,16 +181,16 @@ const Index = () => {
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary-dark"
+                className="bg-primary hover:bg-primary-dark text-lg px-10 py-6"
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
-                <RocketIcon className="h-4 w-4" />
+                <RocketIcon className="h-5 w-5" />
                 {language === 'en' ? 'Invest Now' : 'Инвестировать'}
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5"
+                className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5 text-lg px-10 py-6"
                 onClick={() => scrollToSection('ai-future')}
               >
                 {language === 'en' ? 'Learn More' : 'Узнать больше'}
