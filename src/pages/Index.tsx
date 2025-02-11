@@ -125,7 +125,7 @@ const Index = () => {
                 className="bg-primary hover:bg-primary-dark"
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
-                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
+                {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <button
                 onClick={toggleLanguage}
@@ -184,7 +184,7 @@ const Index = () => {
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
                 <RocketIcon className="h-4 w-4" />
-                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
+                {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <Button 
                 size="lg" 
