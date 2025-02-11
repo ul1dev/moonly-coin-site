@@ -125,7 +125,6 @@ const Index = () => {
                 className="bg-primary hover:bg-primary-dark"
                 onClick={() => window.open('https://telegram.org/', '_blank')}
               >
-                <RocketIcon className="mr-2 h-4 w-4" />
                 {language === 'en' ? 'Invest' : 'Инвестировать'}
               </Button>
               <button
