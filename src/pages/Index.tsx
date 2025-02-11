@@ -123,9 +123,18 @@ const Index = () => {
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary-dark"
-                onClick={() => scrollToSection('investment')}
+                onClick={() => window.open('https://telegram.org/', '_blank')}
               >
-                {language === 'en' ? 'Invest' : 'Инвестировать'}
+                <RocketIcon className="mr-2 h-4 w-4" />
+                {language === 'en' ? 'Invest Now' : 'Инвестировать'}
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5"
+                onClick={() => scrollToSection('ai-future')}
+              >
+                {language === 'en' ? 'Learn More' : 'Узнать больше'}
               </Button>
               <button
                 onClick={toggleLanguage}
@@ -178,11 +187,20 @@ const Index = () => {
                 : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью передовых нейронных сетей и автоматизированных торговых стратегий."}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary-dark">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary-dark"
+                onClick={() => window.open('https://telegram.org/', '_blank')}
+              >
                 <RocketIcon className="mr-2 h-4 w-4" />
                 {language === 'en' ? 'Invest Now' : 'Инвестировать'}
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary/20 text-primary bg-primary/10 hover:bg-primary/5"
+                onClick={() => scrollToSection('ai-future')}
+              >
                 {language === 'en' ? 'Learn More' : 'Узнать больше'}
               </Button>
             </div>
@@ -331,7 +349,7 @@ const Index = () => {
               {language === 'en' ? 'Be part of the AI-driven crypto revolution' : 'Станьте частью крипто-революции на базе ИИ'}
             </p>
           </motion.div>
-          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-6">
             {socialLinks.map((link, index) => (
               <motion.a
                 key={index}
@@ -342,7 +360,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 bg-[#12121A] rounded-full shadow-lg border border-primary/10"
+                className="w-14 h-14 flex items-center justify-center bg-[#12121A] rounded-full shadow-lg border border-primary/10"
               >
                 {link.icon}
               </motion.a>
@@ -479,7 +497,7 @@ const progressCards: ProgressCard[] = [
     title: "AI Adaptation",
     titleRu: "Адаптация ИИ",
     description: "Adapting AI technology for user-friendly interface",
-    descriptionRu: "Адаптация технологии ИИ для удобного пользова��ельского интерфейса",
+    descriptionRu: "Адаптация технологии ИИ для удобного польз��ва��ельского интерфейса",
     isCompleted: false,
     date: "Planned",
     dateRu: "Запланировано"
