@@ -367,8 +367,8 @@ const Index = () => {
               <h3 className="text-lg font-semibold text-white mb-4">CryptoMeme AI</h3>
               <p className="text-gray-400 text-sm">
                 {language === 'en' 
-                  ? 'Revolutionary AI-powered cryptocurrency platform'
-                  : 'Революционная криптовалютная платформа на базе ИИ'}
+                  ? 'Revolutionary AI-powered cryptocurrency'
+                  : 'Революционная криптовалюта на базе ИИ'}
               </p>
             </div>
             <div>
@@ -378,7 +378,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li>
                   <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
-                    {language === 'en' ? 'Privacy Policy' : 'Политика ��онфиденциальности'}
+                    {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
                   </a>
                 </li>
                 <li>
@@ -488,7 +488,7 @@ const progressCards: ProgressCard[] = [
     title: "AI Adaptation",
     titleRu: "Адаптация ИИ",
     description: "Adapting AI technology for user-friendly interface",
-    descriptionRu: "Адаптация технологии ИИ для удобного польз��ва��ельского интерфейса",
+    descriptionRu: "Адаптация технологии ИИ для удобного пользовательского интерфейса",
     isCompleted: false,
     date: "Planned",
     dateRu: "Запланировано"
