@@ -177,7 +177,7 @@ const Index = () => {
                 ? "The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies."
                 : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью передовых нейронных сетей и автоматизированных торговых стратегий."}
             </p>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary-dark">
                 <RocketIcon className="mr-2 h-4 w-4" />
                 {language === 'en' ? 'Invest Now' : 'Инвестировать'}
@@ -331,7 +331,7 @@ const Index = () => {
               {language === 'en' ? 'Be part of the AI-driven crypto revolution' : 'Станьте частью крипто-революции на базе ИИ'}
             </p>
           </motion.div>
-          <div className="mt-12 flex justify-center gap-6">
+          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
             {socialLinks.map((link, index) => (
               <motion.a
                 key={index}
