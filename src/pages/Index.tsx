@@ -169,7 +169,7 @@ const Index = () => {
               <Brain className="h-4 w-4" />
               {language === 'en' ? 'Powered by Advanced AI Technology' : 'На основе передовых технологий ИИ'}
             </span>
-            <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary tracking-tight leading-[1.2]">
+            <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary leading-[1.2]">
               CryptoMeme AI
             </h1>
             <p className="mt-8 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
