@@ -1,12 +1,10 @@
-
 import { motion } from "framer-motion";
-import { RocketIcon, TwitterIcon, TelegramIcon, GithubIcon } from "lucide-react";
+import { RocketIcon, TwitterIcon, MessageCircle, GithubIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto px-4 z-10">
           <motion.div
@@ -35,7 +33,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Roadmap Section */}
       <section className="py-20 bg-gradient-to-b from-white to-primary/5">
         <div className="container mx-auto px-4">
           <motion.div
@@ -67,7 +64,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Media Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -99,7 +95,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Company Story Section */}
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4">
           <motion.div
@@ -144,7 +139,7 @@ const socialLinks = [
   },
   {
     url: "https://t.me",
-    icon: <TelegramIcon className="h-6 w-6 text-primary" />,
+    icon: <MessageCircle className="h-6 w-6 text-primary" />,
   },
   {
     url: "https://github.com",
