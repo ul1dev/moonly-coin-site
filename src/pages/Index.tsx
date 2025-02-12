@@ -537,7 +537,7 @@ const socialLinks = [
       <img 
         src="/lovable-uploads/747309a3-afe4-449d-accf-8543d9734a06.png"
         alt="Telegram"
-        className="w-6 h-6"
+        className="w-auto h-auto max-w-[24px] max-h-[24px]"
       />
     )
   },
@@ -547,7 +547,7 @@ const socialLinks = [
       <img 
         src="/lovable-uploads/dd434247-33a9-4cb9-8499-8fb776ff41e7.png"
         alt="Twitter"
-        className="w-6 h-6"
+        className="w-auto h-auto max-w-[24px] max-h-[24px]"
       />
     )
   },
@@ -557,7 +557,7 @@ const socialLinks = [
       <img 
         src="/lovable-uploads/7d564c75-f427-4330-ad58-ee5fd3f259da.png"
         alt="YouTube"
-        className="w-6 h-6"
+        className="w-auto h-auto max-w-[24px] max-h-[24px]"
       />
     )
   },
@@ -567,7 +567,7 @@ const socialLinks = [
       <img 
         src="/lovable-uploads/b23c29a4-38fa-48f9-a590-d3e74b733b11.png"
         alt="TikTok"
-        className="w-6 h-6"
+        className="w-auto h-auto max-w-[24px] max-h-[24px]"
       />
     )
   }
