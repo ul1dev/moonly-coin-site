@@ -24,12 +24,11 @@ const App = () => (
           {/* Language-specific routes */}
           <Route path="/:lang" element={<Index />} />
           <Route path="/:lang/terms" element={<TermsOfService />} />
+          <Route path="/:lang/privacy" element={<PrivacyPolicy />} />
           
-          {/* Privacy Policy at /privacy */}
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          
-          {/* Legacy route for backward compatibility */}
+          {/* Legacy routes for backward compatibility */}
           <Route path="/terms" element={<Navigate to="/en/terms" replace />} />
+          <Route path="/privacy" element={<Navigate to="/en/privacy" replace />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />

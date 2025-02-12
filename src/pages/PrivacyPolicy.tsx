@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -291,17 +290,17 @@ const PrivacyPolicy = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/privacy" className="text-gray-400 hover:text-primary text-sm">
+                  <Link to={`/${lang}/privacy`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms" className="text-gray-400 hover:text-primary text-sm">
+                  <Link to={`/${lang}/terms`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Terms of Service' : 'Условия использования'}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/disclaimer" className="text-gray-400 hover:text-primary text-sm">
+                  <Link to={`/${lang}/disclaimer`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Risk Disclaimer' : 'Предупреждение о рисках'}
                   </Link>
                 </li>
