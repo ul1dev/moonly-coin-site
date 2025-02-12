@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
           <PolicySection {...t.miscellaneous} />
           <PolicySection {...t.updatingPolicy} />
           
-          <div className="mt-8 pt-8 border-t border-primary/10">
+          <div className="mt-4 pt-4 border-t border-primary/10">
             <p className="text-sm text-gray-400">{t.lastUpdated}</p>
           </div>
         </div>
