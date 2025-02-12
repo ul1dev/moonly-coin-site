@@ -1,4 +1,3 @@
-
 export interface PrivacyPolicyTranslations {
   title: string;
   preamble: {
@@ -298,10 +297,9 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       title: "Updating and Changing This Privacy Policy",
       content: "Due to the continuous development of our Service and changes in legal or regulatory requirements, we may update this Privacy Policy from time to time. Your continued use of our Service after any changes are published constitutes your acceptance of the revised Privacy Policy."
     },
-    lastUpdated: "Last Updated: 21 January 2025"
+    lastUpdated: "Updated: 21 January 2025"
   },
   ru: {
-    // Copy the same structure as English but with Russian translations
     title: "Политика конфиденциальности",
     preamble: {
       title: "Преамбула",
@@ -365,7 +363,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       content: "Вы можете исправить неточные данные."
     },
     rightToErasure: {
-      title: "Право на удаление",
+      title: "Право н�� удаление",
       content: "Запрос на удаление возможен если:",
       list: [
         "Данные больше не нужны",
@@ -454,6 +452,6 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       title: "Обновление политики",
       content: "Политика может периодически обновляться."
     },
-    lastUpdated: "Последнее обновление: 21 января 2025"
+    lastUpdated: "Обновлено: 21 января 2025"
   }
 };
