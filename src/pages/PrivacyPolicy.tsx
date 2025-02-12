@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from "framer-motion";
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -92,7 +93,9 @@ const PrivacyPolicy = () => {
           <PolicySection {...t.miscellaneous} />
           <PolicySection {...t.updatingPolicy} />
           
-          <p className="text-gray-300 mt-8">{t.lastUpdated}</p>
+          <div className="mt-8 pt-8 border-t border-primary/10">
+            <p className="text-sm text-gray-400 italic">{t.lastUpdated}</p>
+          </div>
         </div>
       </motion.div>
 
