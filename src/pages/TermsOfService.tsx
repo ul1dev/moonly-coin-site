@@ -178,67 +178,59 @@ const TermsOfService = () => {
           </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Disclaimer of Warranties' : 'Отказ от Гарантий'}</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-2">
             {language === 'en' ? (
-              'The Service is provided "as is" and "as available." We do not guarantee that: • The Service will operate without failures, errors, or interruptions. • The information and materials provided through the Service are accurate, complete, and up-to-date. • The Service will meet your expectations or requirements. Any decisions made based on the information obtained through the Service are made at your own risk.'
+              'The Service is provided "as is" and "as available." We do not guarantee that:'
             ) : (
-              'Сервис предоставляется "как есть" и "по мере доступности". Мы не гарантируем, что: • Сервис будет работать без сбоев, ошибок или перерывов. • Информация и материалы, предоставляемые через Сервис, являются точными, полными и актуальными. • Сервис будет соответствовать вашим ожиданиям или требованиям. Любые решения, принятые на основе информации, полученной через Сервис, принимаются на ваш собственный риск.'
+              'Сервис предоставляется "как есть" и "по мере доступности". Мы не гарантируем, что:'
             )}
           </p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Limitation of Liability' : 'Ограничение Ответственности'}</h2>
-          <p className="text-gray-300 mb-6">
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
             {language === 'en' ? (
-              'To the fullest extent permitted by law, MoonlyCoin Ltd, as well as its affiliates, employees, and partners, shall not be liable for any direct, indirect, incidental, punitive, or other damages (including lost profits, data loss, damage to reputation, etc.) arising from your use of or inability to use the Service, even if advised of the possibility of such damages.'
+              <>
+                <li>The Service will operate without failures, errors, or interruptions.</li>
+                <li>The information and materials provided through the Service are accurate, complete, and up-to-date.</li>
+                <li>The Service will meet your expectations or requirements.</li>
+              </>
             ) : (
-              'В максимальной степени, разрешенной законом, MoonlyCoin Ltd, а также ее аффилированные лица, сотрудники и партнеры, не несут ответственности за любые прямые, косвенные, случайные, штрафные или другие убытки (включая упущенную прибыль, потерю данных, ущерб репутации и т. д.), возникающие в результате вашего использования или невозможности использования Сервиса, даже если им было сообщено о возможности таких убытков.'
+              <>
+                <li>Сервис будет работать без сбоев, ошибок или перерывов.</li>
+                <li>Информация и материалы, предоставляемые через Сервис, являются точными, полными и актуальными.</li>
+                <li>Сервис будет соответствовать вашим ожиданиям или требованиям.</li>
+              </>
             )}
-          </p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Indemnification' : 'Компенсация Убытков'}</h2>
+          </ul>
           <p className="text-gray-300 mb-6">
             {language === 'en' ? (
-              'You agree to indemnify, defend, and hold harmless MoonlyCoin Ltd, its affiliates, and their respective employees and agents from any claims, expenses, losses, or demands, including reasonable attorney’s fees, arising from your violation of these Terms or unauthorized use of the Service.'
+              'Any decisions made based on the information obtained through the Service are made at your own risk.'
             ) : (
-              'Вы соглашаетесь компенсировать, защищать и освобождать от ответственности MoonlyCoin Ltd, ее аффилированные лица и их сотрудников и агентов от любых требований, расходов, убытков или требований, включая разумные гонорары адвокатов, возникающих в результате вашего нарушения этих Условий или несанкционированного использования Сервиса.'
-            )}
-          </p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Privacy Policy' : 'Политика Конфиденциальности'}</h2>
-          <p className="text-gray-300 mb-6">
-            {language === 'en' ? (
-              'The collection, use, and protection of your personal data are governed by our Privacy Policy. By using the Service, you agree to the terms outlined in the Privacy Policy.'
-            ) : (
-              'Сбор, использование и защита ваших персональных данных регулируются нашей Политикой конфиденциальности. Используя Сервис, вы соглашаетесь с условиями, изложенными в Политике конфиденциальности.'
-            )}
-          </p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Feedback' : 'Обратная Связь'}</h2>
-          <p className="text-gray-300 mb-6">
-            {language === 'en' ? (
-              'We welcome your feedback and suggestions for improving the Service. By providing feedback, you agree that MoonlyCoin Ltd may use it without any restrictions, compensation, or notification.'
-            ) : (
-              'Мы приветствуем ваши отзывы и предложения по улучшению Сервиса. Предоставляя обратную связь, вы соглашаетесь с тем, что MoonlyCoin Ltd может использовать ее без каких-либо ограничений, компенсации или уведомления.'
-            )}
-          </p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Changes to the Service' : 'Изменения в Сервисе'}</h2>
-          <p className="text-gray-300 mb-6">
-            {language === 'en' ? (
-              'We reserve the right to modify, suspend, or discontinue the Service (or any of its features) at any time without prior notice. Such changes may be made for technical or legal reasons.'
-            ) : (
-              'Мы оставляем за собой право изменять, приостанавливать или прекращать Сервис (или любую из его функций) в любое время без предварительного уведомления. Такие изменения могут быть внесены по техническим или юридическим причинам.'
+              'Любые решения, принятые на основе информации, полученной через Сервис, принимаются на ваш собственный риск.'
             )}
           </p>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Violation of the Terms' : 'Нарушение Условий'}</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-2">
             {language === 'en' ? (
-              'If we suspect that you have violated these Terms, we reserve the right, without prior notice, to: • Suspend or terminate your access to the Service. • Disclose information about you if necessary for an investigation or to protect our rights. • Take any other actions permitted by law, including initiating legal proceedings.'
+              'If we suspect that you have violated these Terms, we reserve the right, without prior notice, to:'
             ) : (
-              'Если мы подозреваем, что вы нарушили эти Условия, мы оставляем за собой право, без предварительного уведомления: • Приостановить или прекратить ваш доступ к Сервису. • Раскрыть информацию о вас, если это необходимо для расследования или для защиты наших прав. • Принять любые другие действия, разрешенные законом, включая возбуждение судебных разбирательств.'
+              'Если мы подозреваем, что вы нарушили эти Условия, мы оставляем за собой право, без предварительного уведомления:'
             )}
           </p>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {language === 'en' ? (
+              <>
+                <li>Suspend or terminate your access to the Service.</li>
+                <li>Disclose information about you if necessary for an investigation or to protect our rights.</li>
+                <li>Take any other actions permitted by law, including initiating legal proceedings.</li>
+              </>
+            ) : (
+              <>
+                <li>Приостановить или прекратить ваш доступ к Сервису.</li>
+                <li>Раскрыть информацию о вас, если это необходимо для расследования или для защиты наших прав.</li>
+                <li>Принять любые другие действия, разрешенные законом, включая возбуждение судебных разбирательств.</li>
+              </>
+            )}
+          </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Changes to the Terms' : 'Изменения в Условиях'}</h2>
           <p className="text-gray-300 mb-6">
