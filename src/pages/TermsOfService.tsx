@@ -60,20 +60,52 @@ const TermsOfService = () => {
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'About the Service' : 'О Сервисе'}</h2>
           <p className="text-gray-300 mb-6">
             {language === 'en' ? (
-              'The MoonlyCoin Service provides users with access to a digital platform for working with the meme coin MoonlyCoin. Specifically, the Service allows you to: • Create and manage digital wallets. Users can store, transfer, and exchange MoonlyCoin using the platform\'s user-friendly interface. • Conduct transactions. The Service facilitates operations with MoonlyCoin using state-of-the-art blockchain technology. • Access up-to-date information. Users can receive news, updates, and notifications about the development of the MoonlyCoin project, as well as information on promotions, reward programs, and voting. • Integrate with other services. Where available, third-party applications and partner platforms may allow you to use your MoonlyCoin account for authentication and access additional features.'
+              'The MoonlyCoin Service provides users with access to a digital platform for working with the meme coin MoonlyCoin. Specifically, the Service allows you to:'
             ) : (
-              'Сервис MoonlyCoin предоставляет пользователям доступ к цифровой платформе для работы с мем-койном MoonlyCoin. В частности, Сервис позволяет: • Создавать и управлять цифровыми кошельками. Пользователи могут хранить, переводить и обменивать MoonlyCoin, используя удобный интерфейс платформы. • Проводить транзакции. Сервис обеспечивает операции с MoonlyCoin, используя современную технологию блокчейн. • Получать актуальную информацию. Пользователи могут получать новости, обновления и уведомления о развитии проекта MoonlyCoin, а также информацию о акциях, программах вознаграждений и голосованиях. • Интегрироваться с другими сервисами. Где это доступно, сторонние приложения и платформы-партнеры могут позволить использовать ваш аккаунт MoonlyCoin для аутентификации и доступа к дополнительным функциям.'
+              'Сервис MoonlyCoin предоставляет пользователям доступ к цифровой платформе для работы с мем-койном MoonlyCoin. В частности, Сервис позволяет:'
             )}
           </p>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {language === 'en' ? (
+              <>
+                <li>Create and manage digital wallets. Users can store, transfer, and exchange MoonlyCoin using the platform's user-friendly interface.</li>
+                <li>Conduct transactions. The Service facilitates operations with MoonlyCoin using state-of-the-art blockchain technology.</li>
+                <li>Access up-to-date information. Users can receive news, updates, and notifications about the development of the MoonlyCoin project, as well as information on promotions, reward programs, and voting.</li>
+                <li>Integrate with other services. Where available, third-party applications and partner platforms may allow you to use your MoonlyCoin account for authentication and access additional features.</li>
+              </>
+            ) : (
+              <>
+                <li>Создавать и управлять цифровыми кошельками. Пользователи могут хранить, переводить и обменивать MoonlyCoin, используя удобный интерфейс платформы.</li>
+                <li>Проводить транзакции. Сервис обеспечивает операции с MoonlyCoin, используя современную технологию блокчейн.</li>
+                <li>Получать актуальную информацию. Пользователи могут получать новости, обновления и уведомления о развитии проекта MoonlyCoin, а также информацию о акциях, программах вознаграждений и голосованиях.</li>
+                <li>Интегрироваться с другими сервисами. Где это доступно, сторонние приложения и платформы-партнеры могут позволить использовать ваш аккаунт MoonlyCoin для аутентификации и доступа к дополнительным функциям.</li>
+              </>
+            )}
+          </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Eligibility' : 'Право на использование'}</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-2">
             {language === 'en' ? (
-              'By using the Service, you confirm that: • You have the authority and legal capacity to enter into these Terms. • Your use of the Service does not violate the laws of your country of residence or citizenship. • You are using the Service solely for personal, non-commercial purposes.'
+              'By using the Service, you confirm that:'
             ) : (
-              'Используя Сервис, вы подтверждаете, что: • У вас есть полномочия и правоспособность для заключения этих Условий. • Ваше использование Сервиса не нарушает законы вашей страны проживания или гражданства. • Вы используете Сервис исключительно для личных, некоммерческих целей.'
+              'Используя Сервис, вы подтверждаете, что:'
             )}
           </p>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {language === 'en' ? (
+              <>
+                <li>You have the authority and legal capacity to enter into these Terms.</li>
+                <li>Your use of the Service does not violate the laws of your country of residence or citizenship.</li>
+                <li>You are using the Service solely for personal, non-commercial purposes.</li>
+              </>
+            ) : (
+              <>
+                <li>У вас есть полномочия и правоспособность для заключения этих Условий.</li>
+                <li>Ваше использование Сервиса не нарушает законы вашей страны проживания или гражданства.</li>
+                <li>Вы используете Сервис исключительно для личных, некоммерческих целей.</li>
+              </>
+            )}
+          </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Use of the Service' : 'Использование Сервиса'}</h2>
           <p className="text-gray-300 mb-6">
@@ -85,13 +117,34 @@ const TermsOfService = () => {
           </p>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'User Obligations' : 'Обязанности Пользователя'}</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-2">
             {language === 'en' ? (
-              'You agree not to use the Service for: • Distributing materials that promote illegal activities, violence, extremism, or racial, religious, or ethnic hatred. • Publishing content that is pornographic, offensive, obscene, or otherwise unacceptable. • Disseminating instructions or information that facilitate the commission of criminal acts. • Violating the rights of others or the requirements of the law (including the publication of confidential information, state secrets, or trade secrets). • Using automated means (such as scraping, bots, etc.) to extract or copy the content of the Service without our written permission. • Circumventing or violating any security measures implemented to protect the Service.'
+              'You agree not to use the Service for:'
             ) : (
-              'Вы соглашаетесь не использовать Сервис для: • Распространения материалов, которые пропагандируют незаконные действия, насилие, экстремизм или расовую, религиозную или этническую ненависть. • Публикации контента, который является порнографическим, оскорбительным, непристойным или иным образом неприемлемым. • Распространения инструкций или информации, которые способствуют совершению преступных действий. • Нарушения прав других лиц или требований закона (включая публикацию конфиденциальной информации, государственных секретов или коммерческих тайн). • Использования автоматизированных средств (таких как скрейпинг, боты и т. д.) для извлечения или копирования контента Сервиса без нашего письменного разрешения. • Обхода или нарушения любых мер безопасности, внедренных для защиты Сервиса.'
+              'Вы соглашаетесь не использовать Сервис для:'
             )}
           </p>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {language === 'en' ? (
+              <>
+                <li>Distributing materials that promote illegal activities, violence, extremism, or racial, religious, or ethnic hatred.</li>
+                <li>Publishing content that is pornographic, offensive, obscene, or otherwise unacceptable.</li>
+                <li>Disseminating instructions or information that facilitate the commission of criminal acts.</li>
+                <li>Violating the rights of others or the requirements of the law (including the publication of confidential information, state secrets, or trade secrets).</li>
+                <li>Using automated means (such as scraping, bots, etc.) to extract or copy the content of the Service without our written permission.</li>
+                <li>Circumventing or violating any security measures implemented to protect the Service.</li>
+              </>
+            ) : (
+              <>
+                <li>Распространения материалов, которые пропагандируют незаконные действия, насилие, экстремизм или расовую, религиозную или этническую ненависть.</li>
+                <li>Публикации контента, который является порнографическим, оскорбительным, непристойным или иным образом неприемлемым.</li>
+                <li>Распространения инструкций или информации, которые способствуют совершению преступных действий.</li>
+                <li>Нарушения прав других лиц или требований закона (включая публикацию конфиденциальной информации, государственных секретов или коммерческих тайн).</li>
+                <li>Использования автоматизированных средств (таких как скрейпинг, боты и т. д.) для извлечения или копирования контента Сервиса без нашего письменного разрешения.</li>
+                <li>Обхода или нарушения любых мер безопасности, внедренных для защиты Сервиса.</li>
+              </>
+            )}
+          </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Third-Party Applications and Links' : 'Сторонние Приложения и Ссылки'}</h2>
           <p className="text-gray-300 mb-6">
@@ -103,13 +156,26 @@ const TermsOfService = () => {
           </p>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Intellectual Property Rights' : 'Права Интеллектуальной Собственности'}</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-2">
             {language === 'en' ? (
-              'All content, design, software, and other materials available through the Service are the property of MoonlyCoin Ltd, its licensors, or other rights holders and are protected by applicable copyright, trademark, patent, and other laws. Without our prior written consent, you are prohibited from: • Copying, modifying, distributing, publishing, or otherwise using any materials from the Service. • Reverse engineering, decompiling, or otherwise attempting to extract the source code or architecture of the Service.'
+              'All content, design, software, and other materials available through the Service are the property of MoonlyCoin Ltd, its licensors, or other rights holders and are protected by applicable copyright, trademark, patent, and other laws. Without our prior written consent, you are prohibited from:'
             ) : (
-              'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью MoonlyCoin Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменного согласия вам запрещается: • Копировать, изменять, распространять, публиковать или иным образом использовать любые материалы из Сервиса. • Обратная разработка, декомпиляция или иные попытки извлечь исходный код или архитектуру Сервиса.'
+              'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью MoonlyCoin Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменного согласия вам запрещается:'
             )}
           </p>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {language === 'en' ? (
+              <>
+                <li>Copying, modifying, distributing, publishing, or otherwise using any materials from the Service.</li>
+                <li>Reverse engineering, decompiling, or otherwise attempting to extract the source code or architecture of the Service.</li>
+              </>
+            ) : (
+              <>
+                <li>Копировать, изменять, распространять, публиковать или иным образом использовать любые материалы из Сервиса.</li>
+                <li>Обратная разработка, декомпиляция или иные попытки извлечь исходный код или архитектуру Сервиса.</li>
+              </>
+            )}
+          </ul>
 
           <h2 className="text-xl font-semibold text-primary mb-4">{language === 'en' ? 'Disclaimer of Warranties' : 'Отказ от Гарантий'}</h2>
           <p className="text-gray-300 mb-6">
