@@ -190,7 +190,7 @@ const Index = () => {
             <p className="mt-8 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {language === 'en' 
                 ? "The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies."
-                : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью п��редовых нейронных сетей и автоматизированных торговых стратегий."}
+                : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью передовых нейронных сетей и автоматизированных торговых стратегий."}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button 
