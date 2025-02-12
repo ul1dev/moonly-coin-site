@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
 
 const queryClient = new QueryClient();
 
@@ -25,10 +26,12 @@ const App = () => (
           <Route path="/:lang" element={<Index />} />
           <Route path="/:lang/terms" element={<TermsOfService />} />
           <Route path="/:lang/privacy" element={<PrivacyPolicy />} />
+          <Route path="/:lang/disclaimer" element={<Disclaimer />} />
           
           {/* Legacy routes for backward compatibility */}
           <Route path="/terms" element={<Navigate to="/en/terms" replace />} />
           <Route path="/privacy" element={<Navigate to="/en/privacy" replace />} />
+          <Route path="/disclaimer" element={<Navigate to="/en/disclaimer" replace />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
