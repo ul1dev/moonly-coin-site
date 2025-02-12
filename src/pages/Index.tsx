@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useParams, useNavigate } from 'react-router-dom';
 
 interface ProgressCard {
   id: string;
@@ -72,8 +73,22 @@ const dotVariants = {
 };
 
 const Index = () => {
-  const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
+  const { lang = 'en' } = useParams<{ lang: string }>();
+  const navigate = useNavigate();
+  const [language, setLanguage] = React.useState<'en' | 'ru'>(lang as 'en' | 'ru');
   const [dots, setDots] = React.useState<Array<{ id: number; x: number; y: number }>>([]);
+
+  React.useEffect(() => {
+    navigate(`/${language}`, { replace: true });
+  }, [language, navigate]);
+
+  React.useEffect(() => {
+    if (lang === 'en' || lang === 'ru') {
+      setLanguage(lang);
+    } else {
+      navigate('/en', { replace: true });
+    }
+  }, [lang, navigate]);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
