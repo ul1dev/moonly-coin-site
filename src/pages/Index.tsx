@@ -122,7 +122,7 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="text-primary font-bold">CryptoMeme AI</div>
+            <div className="text-primary font-bold">MoonlyCoin</div>
             <nav className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
@@ -185,7 +185,7 @@ const Index = () => {
               {language === 'en' ? 'Powered by Advanced AI Technology' : 'На основе передовых технологий ИИ'}
             </span>
             <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary" style={{ lineHeight: '1.2' }}>
-              CryptoMeme AI
+              MoonlyCoin
             </h1>
             <p className="mt-8 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {language === 'en' 
@@ -379,7 +379,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">CryptoMeme AI</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">MoonlyCoin</h3>
               <p className="text-gray-400 text-sm">
                 {language === 'en' 
                   ? 'Revolutionary AI-powered cryptocurrency'
@@ -417,7 +417,7 @@ const Index = () => {
           </div>
           <div className="mt-8 pt-8 border-t border-primary/10 text-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} CryptoMeme AI
+              © {new Date().getFullYear()} MoonlyCoin
             </p>
             <p className="text-gray-400 text-sm mt-1">
               {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
