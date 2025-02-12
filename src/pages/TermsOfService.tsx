@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -139,7 +138,7 @@ const TermsOfService = () => {
               </>
             ) : (
               <>
-                <li>Распространения материалов, которые пропагандируют незаконные действия, насилие, экстремизм или расовую, религиозную или этническую ненависть.</li>
+                <li>Распространения материалов, которые пропаганд��руют незаконные действия, насилие, экстремизм или расовую, религиозную или этническую ненависть.</li>
                 <li>Публикации контента, который является порнографическим, оскорбительным, непристойным или иным образом неприемлемым.</li>
                 <li>Распространения инструкций или информации, которые способствуют совершению преступных действий.</li>
                 <li>Нарушения прав других лиц или требований закона (включая публикацию конфиденциальной информации, государственных секретов или коммерческих тайн).</li>
@@ -163,7 +162,7 @@ const TermsOfService = () => {
             {language === 'en' ? (
               'All content, design, software, and other materials available through the Service are the property of MoonlyCoin Ltd, its licensors, or other rights holders and are protected by applicable copyright, trademark, patent, and other laws. Without our prior written consent, you are prohibited from:'
             ) : (
-              'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью MoonlyCoin Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменного согласия вам запрещается:'
+              'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью MoonlyCoin Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменно��о согласия вам запрещается:'
             )}
           </p>
           <ul className="list-disc pl-6 text-gray-300 mb-6">
@@ -296,7 +295,7 @@ const TermsOfService = () => {
               <h3 className="text-lg font-semibold text-white mb-4">
                 {language === 'en' ? 'Contact' : 'Контакты'}
               </h3>
-              <p className="text-gray-400 text-sm">support@cryptomeme-ai.com</p>
+              <p className="text-gray-400 text-sm">support@moonlycoin.com</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-primary/10 text-center">
