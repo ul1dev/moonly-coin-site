@@ -4,7 +4,6 @@ import { RocketIcon, TwitterIcon, MessageCircle, Brain, Check, Youtube } from "l
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useParams, useNavigate } from 'react-router-dom';
-import MoonlyCoinLogo from '@/components/MoonlyCoinLogo';
 
 interface ProgressCard {
   id: string;
@@ -123,10 +122,7 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2">
-              <MoonlyCoinLogo size={32} />
-              <span className="text-primary font-bold">MoonlyCoin</span>
-            </div>
+            <div className="text-primary font-bold">MoonlyCoin</div>
             <nav className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
@@ -188,16 +184,13 @@ const Index = () => {
               <Brain className="h-4 w-4" />
               {language === 'en' ? 'Powered by Advanced AI Technology' : 'На основе передовых технологий ИИ'}
             </span>
-            <div className="flex justify-center mt-8 mb-4">
-              <MoonlyCoinLogo size={120} />
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary" style={{ lineHeight: '1.2' }}>
+            <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-dark to-secondary" style={{ lineHeight: '1.2' }}>
               MoonlyCoin
             </h1>
             <p className="mt-8 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {language === 'en' 
                 ? "The world's first cryptocurrency fully managed by artificial intelligence. Join us in revolutionizing the crypto market through advanced neural networks and automated trading strategies."
-                : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью передовых нейронных сетей и автоматизированных торговых стратегий."}
+                : "Первая в мире криптовалюта, полностью управляемая искусственным интеллектом. Присоединяйтесь к нам в революции крипторынка с помощью п��редовых нейронных сетей и автоматизированных торговых стратегий."}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button 
