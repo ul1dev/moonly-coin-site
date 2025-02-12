@@ -308,7 +308,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     whoWeAre: {
       title: "Кто мы",
       content: "MoonlyCoin Ltd - компания, зарегистрированная на Британских Виргинских островах.",
-      address: "MoonlyCoin Ltd\n100 Crypto Way, Suite 400\nRoad Town, Tortola\nБританские Виргинские острова, VG1122",
+      address: "MoonlyCoin Ltd\n100 Crypto Way, Suite 400\nRoad Town, Тортола\nБританские Виргинские острова, VG1122",
       contact: "По вопросам о конфиденциальности обращайтесь:",
       contactInfo: "Email: privacy@moonlycoin.com\nСтраница контактов: https://moonlycoin.com/contact"
     },
