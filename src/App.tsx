@@ -22,7 +22,10 @@ const App = () => (
           
           {/* Language-specific routes */}
           <Route path="/:lang" element={<Index />} />
-          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/:lang/terms" element={<TermsOfService />} />
+          
+          {/* Legacy route for backward compatibility */}
+          <Route path="/terms" element={<Navigate to="/en/terms" replace />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
