@@ -135,7 +135,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     title: "Privacy Policy",
     preamble: {
       title: "Preamble",
-      content: "This Privacy Policy (\"Privacy Policy\"), together with our Terms of Use (\"Terms\"), sets out the basis for our collection, use, and disclosure of personal information about individuals who use the MoonlyCoin platform (the \"Service\"), when you interact with us, enter into agreements with us, communicate with us, or otherwise engage with our services. It also explains the measures we take to keep your information secure. For the purposes of this Privacy Policy, \"Personal Information\" means any data that can directly or indirectly identify you (for example, your name, contact details, IP address, or information regarding your use of our Service). We comply with the Data Protection Act, 2021 of the British Virgin Islands and, to the extent applicable, with the data protection laws of other jurisdictions—including, but not limited to, the European General Data Protection Regulation (the \"GDPR\"). We process your data in a lawful, fair, and transparent manner."
+      content: "This Privacy Policy (\"Privacy Policy\"), together with our Terms of Use (\"Terms\"), sets out the basis for our collection, use, and disclosure of personal information about individuals who use the MoonlyCoin platform (the \"Service\"), when you interact with us, enter into agreements with us, communicate with us, or otherwise engage with our services. It also explains the measures we take to keep your information secure. For the purposes of this Privacy Policy, \"Personal Information\" means any data that can directly or indirectly identify you (for example, your name, contact details, IP address, or information regarding your use of our Service). We comply with the Data Protection Act, 2021 of the British Virgin Islands and, to the extent applicable, with the data protection laws of other jurisdictions - including, but not limited to, the European General Data Protection Regulation (the \"GDPR\"). We process your data in a lawful, fair, and transparent manner."
     },
     whoWeAre: {
       title: "Who We Are",
@@ -156,7 +156,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     informationFromOtherSources: {
       title: "Information We Receive from Other Sources",
-      content: "We may receive information about you if you use other services operated by us or our partners. We also work with third parties—including contractors, project partners, service providers, and analytics providers—and may receive information about you from them. Such information may be combined with the information you provide directly to us."
+      content: "We may receive information about you if you use other services operated by us or our partners. We also work with third parties - including contractors, project partners, service providers, and analytics providers - and may receive information about you from them. Such information may be combined with the information you provide directly to us."
     },
     howYourInformationIsUsed: {
       title: "How Your Information Is Used",
@@ -174,7 +174,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     whoHasAccess: {
       title: "Who Has Access to Your Information",
-      content: "In certain cases, we may share your information with trusted third-party service providers, agents, subcontractors, or affiliated organizations to perform specific tasks and deliver services to you—such as processing and storing information or sending communications."
+      content: "In certain cases, we may share your information with trusted third-party service providers, agents, subcontractors, or affiliated organizations to perform specific tasks and deliver services to you - such as processing and storing information or sending communications."
     },
     yourRights: {
       title: "Your Choices and Your Rights",
@@ -272,7 +272,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     useOfCookies: {
       title: "Use of Cookies",
-      content: "Our Service uses cookies—small text files stored on your device—to distinguish you from other users and to enhance your experience. Cookies enable features such as personalized content, social media integration, and traffic analysis. Some cookies may be placed by third-party services appearing on our pages. By continuing to use our Service, you agree to our use of cookies. We use different types of cookies, including:"
+      content: "Our Service uses cookies - small text files stored on your device - to distinguish you from other users and to enhance your experience. Cookies enable features such as personalized content, social media integration, and traffic analysis. Some cookies may be placed by third-party services appearing on our pages. By continuing to use our Service, you agree to our use of cookies. We use different types of cookies, including:"
     },
     strictlyNecessaryCookies: {
       content: "Strictly Necessary Cookies: These cookies are essential for the proper functioning of the Service and cannot be switched off in our systems. They are typically set in response to actions you take (such as setting your privacy preferences, logging in, or filling out forms) and enable basic functions like page navigation and access to secure areas of the Service."
@@ -317,14 +317,14 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       content: "Мы собираем ограниченную информацию о вас для предоставления и улучшения функциональности нашего Сервиса, включая, но не ограничиваясь следующим:",
       list: [
         "Данные вашей учетной записи Telegram (например, ваше имя пользователя, Telegram ID и отображаемое имя), если вы используете наш Сервис через мини-приложение Telegram.",
-        "Информацию о вашем блокчейн - кошельке (например, адрес вашего кошелька) для обеспечения функций, взаимодействующих с блокчейн-системами.",
+        "Информацию о вашем блокчейн-кошельке (например, адрес вашего кошелька) для обеспечения функций, взаимодействующих с блокчейн-системами.",
         "Основные технические данные, включая ваш IP-адрес, приблизительное местоположение, тип устройства, операционную систему и браузер, для обеспечения безопасности и корректной работы нашего Сервиса."
       ],
       additionalContent: "Мы не собираем адреса электронной почты или другую личную информацию, если вы не решите предоставить их самостоятельно. Предоставляя нам эту информацию, вы явно даёте согласие на ее использование в соответствии с настоящей Политикой конфиденциальности."
     },
     informationFromOtherSources: {
       title: "Информация, которую мы получаем из других источников",
-      content: "Мы можем получать информацию о вас, если вы пользуетесь другими услугами, предоставляемыми нами или нашими партнерами. Мы также сотрудничаем с третьими сторонами, включая подрядчиков, партнеров по проектам, поставщиков услуг и аналитических компаний, и можем получать информацию о вас от них. Такая информация может комбинироваться с информацией, которую вы предоставляете напрямую."
+      content: "Мы можем получать информацию о вас, если вы пользуетесь другими услугами, предоставляемыми нами или нашими партнерами. Мы также сотрудничаем с третьими сторонами - включая подрядчиков, партнеров по проектам, поставщиков услуг и аналитических компаний - и можем получать информацию о вас от них. Такая информация может комбинироваться с информацией, которую вы предоставляете напрямую."
     },
     howYourInformationIsUsed: {
       title: "Как используется ваша информация",
@@ -332,7 +332,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       list: [
         "Обеспечение надлежащего функционирования нашего Сервиса, включая поддержку, обслуживание и улучшение его функций и производительности.",
         "Предоставление вам актуальных обновлений и новостей о проекте MoonlyCoin.",
-        "Отправка вам персонализированных сообщений, которые вы запросили или которые могут представлять для вас интерес, на основе вашей активности в нашем Сервисе или в сервисах наших партнеров. Такие сообщения могут включать информацию о промо - акциях, мероприятиях и программах вознаграждения.",
+        "Отправка вам персонализированных сообщений, которые вы запросили или которые могут представлять для вас интерес, на основе вашей активности в нашем Сервисе или в сервисах наших партнеров. Такие сообщения могут включать информацию о промо-акциях, мероприятиях и программах вознаграждения.",
         "Анализ поведения пользователей и оценка эффективности нашего Сервиса, что помогает нам предлагать рекомендации по улучшению услуг и сопутствующих сервисов.",
         "Проведение аналитики и профилирования для создания сводных отчетов о тенденциях, понимания того, как пользователи получают доступ к нашему Сервису и используют его, оценки откликов на маркетинговые кампании, а также определения наиболее эффективных маркетинговых каналов и сообщений.",
         "Сбор ваших отзывов и комментариев относительно нашего Сервиса.",
@@ -342,7 +342,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     whoHasAccess: {
       title: "Кто имеет доступ к вашей информации",
-      content: "В отдельных случаях мы можем передавать вашу информацию доверенным сторонним поставщикам услуг, агентам, субподрядчикам или аффилированным организациям для выполнения определенных задач и оказания услуг вам (например, для обработки и хранения информации или отправки сообщений)."
+      content: "В отдельных случаях мы можем передавать вашу информацию доверенным сторонним поставщикам услуг, агентам, субподрядчикам или аффилированным организациям для выполнения определенных задач и оказания услуг вам - например, для обработки и хранения информации или отправки сообщений."
     },
     yourRights: {
       title: "Ваши выборы и ваши права",
@@ -358,7 +358,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
       list: [
         "Цели, для которых обрабатывается ваша информация;",
         "Категории обрабатываемой личной информации;",
-        "Получатели и��и категории получателей, которым ваша информация уже передавалась или будет передана;",
+        "Получатели и категории получателей, которым ваша информация уже передавалась или будет передана;",
         "Планируемый срок хранения вашей информации или, если это невозможно, критерии, используемые для определения этого срока;",
         "Ваше право требовать исправления или удаления вашей личной информации, ограничения её обработки и право возражать против такой обработки;",
         "Ваше право подать жалобу в надзорный орган;",
@@ -386,7 +386,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     rightToRestriction: {
       title: "Право на ограничение обработки",
-      content: "Вы имеете право требовать ограничения обработки вашей личной информации в следующих ��лучаях:",
+      content: "Вы имеете право требовать ограничения обработки вашей личной информации в следующих случаях:",
       list: [
         "Если вы оспариваете точность вашей информации в течение периода, необходимого для проверки её точности;",
         "Если обработка является незаконной, и вы возражаете против её удаления, требуя вместо этого ограничения на её использование;",
@@ -405,7 +405,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     automatedDecisionMaking: {
       title: "Автоматизированное принятие решений, включая профилирование",
-      content: "Вы имеете право не подвергаться решениям, основывающимся исключительно на автоматизированной обработке, включая профи��ирование, которые порождают юридические последствия или иным образом существенно влияют на вас, если такая обработка не является:",
+      content: "Вы имеете право не подвергаться решениям, основывающимся исключительно на автоматизированной обработке, включая профилирование, которые порождают юридические последствия или иным образом существенно влияют на вас, если такая обработка не является:",
       list: [
         "необходимой для заключения или исполнения договора между вами и нами;",
         "осуществляемой на основе вашего явного согласия;",
@@ -451,7 +451,7 @@ export const privacyPolicyTranslations: Record<string, PrivacyPolicyTranslations
     },
     ifYouAreUnder18: {
       title: "Если вы 18 или меньше",
-      content: "Мы ценим вашу конфиденциальность. Если вы еще не достигли 18 лет, пожалуйста, убедитесь, что ваш родитель или监护арь дает вам согласие на предоставление личной информации или использование нашего Сервиса."
+      content: "Мы ценим вашу конфиденциальность. Если вы еще не достигли 18 лет, пожалуйста, убедитесь, что ваш родитель или опекун дает вам согласие на предоставление личной информации или использование нашего Сервиса."
     },
     whereWeStoreInformation: {
       title: "Где мы храним вашу личную информацию",
