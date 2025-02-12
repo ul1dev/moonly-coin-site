@@ -1,56 +1,9 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-
-interface Translations {
-  [key: string]: {
-    title: string;
-    preamble: {
-      title: string;
-      content: string;
-    };
-    whoWeAre: {
-      title: string;
-      content: string;
-      address: string;
-      contact: string;
-      contactInfo: string;
-    };
-  }
-}
-
-const translations: Translations = {
-  en: {
-    title: "Privacy Policy",
-    preamble: {
-      title: "Preamble",
-      content: "This Privacy Policy (\"Privacy Policy\"), together with our Terms of Use (\"Terms\"), sets out the basis for our collection, use, and disclosure of personal information about individuals who use the MoonlyCoin platform (the \"Service\"), when you interact with us, enter into agreements with us, communicate with us, or otherwise engage with our services."
-    },
-    whoWeAre: {
-      title: "Who We Are",
-      content: "MoonlyCoin Ltd (\"We,\" \"Us,\" or \"Our\") is a company incorporated in the British Virgin Islands that operates the MoonlyCoin platform, offering digital wallet and blockchain transaction services as well as community engagement channels for cryptocurrency enthusiasts. Our registered address is:",
-      address: "MoonlyCoin Ltd\n100 Crypto Way, Suite 400\nRoad Town, Tortola\nBritish Virgin Islands, VG1122",
-      contact: "If you have any questions about our privacy practices or this Privacy Policy, or if you wish to exercise any of your rights described herein, please contact us at:",
-      contactInfo: "Email: privacy@moonlycoin.com\nContact Page: https://moonlycoin.com/contact"
-    }
-  },
-  ru: {
-    title: "Политика конфиденциальности",
-    preamble: {
-      title: "Преамбула",
-      content: "Настоящая Политика конфиденциальности («Политика конфиденциальности»), вместе с нашими Условиями использования («Условия»), устанавливает основу для сбора, использования и раскрытия персональных данных о лицах, использующих платформу MoonlyCoin («Сервис»), когда вы взаимодействуете с нами, заключаете с нами соглашения, общаетесь с нами или иным образом взаимодействуете с нашими услугами."
-    },
-    whoWeAre: {
-      title: "Кто мы",
-      content: "MoonlyCoin Ltd («Мы», «Нас» или «Наш») – это компания, зарегистрированная на Британских Виргинских островах, которая управляет платформой MoonlyCoin, предоставляющей услуги цифрового кошелька и блокчейн-транзакций, а также каналы взаимодействия с сообществом для энтузиастов криптовалют. Наш зарегистрированный адрес:",
-      address: "MoonlyCoin Ltd\n100 Crypto Way, Suite 400\nRoad Town, Tortola\nБританские Виргинские острова, VG1122",
-      contact: "Если у вас есть вопросы о наших практиках конфиденциальности или об этой Политике конфиденциальности, или если вы хотите воспользоваться любым из ваших прав, описанных в настоящем документе, пожалуйста, свяжитесь с нами по адресу:",
-      contactInfo: "Email: privacy@moonlycoin.com\nСтраница контактов: https://moonlycoin.com/contact"
-    }
-  }
-};
+import PolicySection from "@/components/privacy/PolicySection";
+import { privacyPolicyTranslations } from "@/locales/privacyPolicy";
 
 const PrivacyPolicy = () => {
   const { lang = 'en' } = useParams<{ lang: string }>();
@@ -63,7 +16,7 @@ const PrivacyPolicy = () => {
     navigate(`/${newLang}/privacy`);
   };
 
-  const t = translations[language];
+  const t = privacyPolicyTranslations[language];
 
   return (
     <div className="min-h-screen bg-[#0A0A0F] text-white flex flex-col">
@@ -101,14 +54,45 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto prose prose-invert">
           <h1 className="text-3xl font-bold mb-6">{t.title}</h1>
           
-          <h2 className="text-xl font-semibold text-primary mb-4">{t.preamble.title}</h2>
-          <p className="text-gray-300 mb-6">{t.preamble.content}</p>
-
-          <h2 className="text-xl font-semibold text-primary mb-4">{t.whoWeAre.title}</h2>
-          <p className="text-gray-300 mb-6">{t.whoWeAre.content}</p>
+          <PolicySection {...t.preamble} />
+          
+          <PolicySection {...t.whoWeAre} />
           <pre className="text-gray-300 mb-6 whitespace-pre-wrap">{t.whoWeAre.address}</pre>
           <p className="text-gray-300 mb-6">{t.whoWeAre.contact}</p>
           <pre className="text-gray-300 mb-6 whitespace-pre-wrap">{t.whoWeAre.contactInfo}</pre>
+          
+          <PolicySection {...t.informationWeCollect} />
+          <PolicySection {...t.informationFromOtherSources} />
+          <PolicySection {...t.howYourInformationIsUsed} />
+          <PolicySection {...t.whoHasAccess} />
+          <PolicySection {...t.yourRights} />
+          <PolicySection {...t.rightToConfirmation} />
+          <PolicySection {...t.rightToAccess} />
+          <PolicySection {...t.rightToRectification} />
+          <PolicySection {...t.rightToErasure} />
+          <PolicySection {...t.rightToRestriction} />
+          <PolicySection {...t.rightToObject} />
+          <PolicySection {...t.rightToDataPortability} />
+          <PolicySection {...t.automatedDecisionMaking} />
+          <PolicySection {...t.rightToWithdrawConsent} />
+          <PolicySection {...t.manifestlyUnfoundedRequests} />
+          
+          <p className="text-gray-300 mb-6">{t.marketingPreferences.content}</p>
+          
+          <PolicySection {...t.updateInformation} />
+          <PolicySection {...t.securityMeasures} />
+          <PolicySection {...t.profiling} />
+          <PolicySection {...t.useOfCookies} />
+          
+          <p className="text-gray-300 mb-6">{t.strictlyNecessaryCookies.content}</p>
+          
+          <PolicySection {...t.linksToOtherSites} />
+          <PolicySection {...t.ifYouAreUnder18} />
+          <PolicySection {...t.whereWeStoreInformation} />
+          <PolicySection {...t.miscellaneous} />
+          <PolicySection {...t.updatingPolicy} />
+          
+          <p className="text-gray-300 mt-8">{t.lastUpdated}</p>
         </div>
       </motion.div>
 
