@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           
           {/* Language-specific routes */}
           <Route path="/:lang" element={<Index />} />
+          <Route path="/terms" element={<TermsOfService />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
