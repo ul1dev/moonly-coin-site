@@ -532,17 +532,57 @@ const progressCards: ProgressCard[] = [
 
 const socialLinks = [
   {
-    url: "https://twitter.com",
-    icon: <TwitterIcon className="h-6 w-6 text-primary" />,
+    url: "https://t.me",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-primary"
+      >
+        <path d="M21.99 4.97a1.98 1.98 0 0 0-2.45-1.56L2.54 8.4a1.99 1.99 0 0 0 0 3.82l7 2.77l2.77 7a1.99 1.99 0 0 0 3.82 0l5-17a1.98 1.98 0 0 0-1.14-2.02Z" />
+      </svg>
+    )
   },
   {
-    url: "https://t.me",
-    icon: <MessageCircle className="h-6 w-6 text-primary" />,
+    url: "https://twitter.com",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-primary"
+      >
+        <path d="M4 4h16v16H4z M4 4l7.2 7.2M19.2 4L12 11.2" />
+      </svg>
+    )
   },
   {
     url: "https://youtube.com",
     icon: <Youtube className="h-6 w-6 text-primary" />,
   },
+  {
+    url: "https://tiktok.com",
+    icon: (
+      <img 
+        src="/lovable-uploads/8186e04e-9664-45de-8411-c9e7b93c3669.png" 
+        alt="TikTok"
+        className="w-6 h-6 filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+      />
+    )
+  }
 ];
 
 export default Index;
