@@ -537,7 +537,7 @@ const socialLinks = [
       <img 
         src="/lovable-uploads/747309a3-afe4-449d-accf-8543d9734a06.png"
         alt="Telegram"
-        className="w-auto h-auto max-w-[24px] max-h-[24px] -ml-1"
+        className="w-auto h-auto max-w-[24px] max-h-[24px] -ml-0.5"
       />
     )
   },
