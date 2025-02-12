@@ -534,52 +534,40 @@ const socialLinks = [
   {
     url: "https://t.me",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-primary"
-      >
-        <path d="M21.99 4.97a1.98 1.98 0 0 0-2.45-1.56L2.54 8.4a1.99 1.99 0 0 0 0 3.82l7 2.77l2.77 7a1.99 1.99 0 0 0 3.82 0l5-17a1.98 1.98 0 0 0-1.14-2.02Z" />
-      </svg>
+      <img 
+        src="/lovable-uploads/747309a3-afe4-449d-accf-8543d9734a06.png"
+        alt="Telegram"
+        className="w-6 h-6"
+      />
     )
   },
   {
     url: "https://twitter.com",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-primary"
-      >
-        <path d="M4 4h16v16H4z M4 4l7.2 7.2M19.2 4L12 11.2" />
-      </svg>
+      <img 
+        src="/lovable-uploads/dd434247-33a9-4cb9-8499-8fb776ff41e7.png"
+        alt="Twitter"
+        className="w-6 h-6"
+      />
     )
   },
   {
     url: "https://youtube.com",
-    icon: <Youtube className="h-6 w-6 text-primary" />,
+    icon: (
+      <img 
+        src="/lovable-uploads/7d564c75-f427-4330-ad58-ee5fd3f259da.png"
+        alt="YouTube"
+        className="w-6 h-6"
+      />
+    )
   },
   {
     url: "https://tiktok.com",
     icon: (
       <img 
-        src="/lovable-uploads/8186e04e-9664-45de-8411-c9e7b93c3669.png" 
+        src="/lovable-uploads/b23c29a4-38fa-48f9-a590-d3e74b733b11.png"
         alt="TikTok"
-        className="w-6 h-6 filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+        className="w-6 h-6"
       />
     )
   }
