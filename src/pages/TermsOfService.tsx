@@ -259,20 +259,53 @@ const TermsOfService = () => {
         </div>
       </motion.div>
 
-      <footer className="bg-[#0A0A0F] border-t border-primary/10 py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-6">
-              <Link to={`/${lang}`} className="text-primary hover:text-primary/80">
-                {language === 'en' ? 'Home' : 'Главная'}
-              </Link>
-              <Link to={`/${lang}/terms`} className="text-primary hover:text-primary/80">
-                {language === 'en' ? 'Terms of Service' : 'Условия использования'}
-              </Link>
+      <footer className="bg-[#0D0D12] border-t border-primary/10">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">MoonlyCoin</h3>
+              <p className="text-gray-400 text-sm">
+                {language === 'en' 
+                  ? 'Revolutionary AI-powered cryptocurrency'
+                  : 'Революционная криптовалюта на базе ИИ'}
+              </p>
             </div>
-            <div className="text-gray-400 text-sm">
-              © 2025 MoonlyCoin. {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                {language === 'en' ? 'Legal' : 'Юридическая информация'}
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
+                    {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-gray-400 hover:text-primary text-sm">
+                    {language === 'en' ? 'Terms of Service' : 'Условия использования'}
+                  </a>
+                </li>
+                <li>
+                  <a href="/disclaimer" className="text-gray-400 hover:text-primary text-sm">
+                    {language === 'en' ? 'Risk Disclaimer' : 'Предупреждение о рисках'}
+                  </a>
+                </li>
+              </ul>
             </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                {language === 'en' ? 'Contact' : 'Контакты'}
+              </h3>
+              <p className="text-gray-400 text-sm">support@cryptomeme-ai.com</p>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-primary/10 text-center">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} MoonlyCoin
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
+              {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
+            </p>
           </div>
         </div>
       </footer>
