@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { motion } from "framer-motion";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
 const TermsOfService = () => {
@@ -15,11 +16,13 @@ const TermsOfService = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0F] text-white">
+    <div className="min-h-screen bg-[#0A0A0F] text-white flex flex-col">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="text-primary font-bold">MoonlyCoin</div>
+            <Link to={`/${lang}`} className="text-primary font-bold hover:opacity-80 transition-opacity">
+              MoonlyCoin
+            </Link>
             <div className="flex items-center gap-4">
               <Button 
                 size="lg"
@@ -43,7 +46,7 @@ const TermsOfService = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 py-24"
+        className="container mx-auto px-4 py-24 flex-grow"
       >
         <div className="max-w-4xl mx-auto prose prose-invert">
           <h1 className="text-3xl font-bold mb-6">{language === 'en' ? 'Terms of Service' : 'Условия использования'}</h1>
@@ -255,6 +258,24 @@ const TermsOfService = () => {
           </div>
         </div>
       </motion.div>
+
+      <footer className="bg-[#0A0A0F] border-t border-primary/10 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-6">
+              <Link to={`/${lang}`} className="text-primary hover:text-primary/80">
+                {language === 'en' ? 'Home' : 'Главная'}
+              </Link>
+              <Link to={`/${lang}/terms`} className="text-primary hover:text-primary/80">
+                {language === 'en' ? 'Terms of Service' : 'Условия использования'}
+              </Link>
+            </div>
+            <div className="text-gray-400 text-sm">
+              © 2025 MoonlyCoin. {language === 'en' ? 'All rights reserved.' : 'Все права защищены.'}
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
