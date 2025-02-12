@@ -26,11 +26,11 @@ const translations: Translations = {
     title: "Privacy Policy",
     preamble: {
       title: "Preamble",
-      content: "This Privacy Policy ("Privacy Policy"), together with our Terms of Use ("Terms"), sets out the basis for our collection, use, and disclosure of personal information about individuals who use the MoonlyCoin platform (the "Service"), when you interact with us, enter into agreements with us, communicate with us, or otherwise engage with our services."
+      content: "This Privacy Policy (\"Privacy Policy\"), together with our Terms of Use (\"Terms\"), sets out the basis for our collection, use, and disclosure of personal information about individuals who use the MoonlyCoin platform (the \"Service\"), when you interact with us, enter into agreements with us, communicate with us, or otherwise engage with our services."
     },
     whoWeAre: {
       title: "Who We Are",
-      content: "MoonlyCoin Ltd ("We," "Us," or "Our") is a company incorporated in the British Virgin Islands that operates the MoonlyCoin platform, offering digital wallet and blockchain transaction services as well as community engagement channels for cryptocurrency enthusiasts. Our registered address is:",
+      content: "MoonlyCoin Ltd (\"We,\" \"Us,\" or \"Our\") is a company incorporated in the British Virgin Islands that operates the MoonlyCoin platform, offering digital wallet and blockchain transaction services as well as community engagement channels for cryptocurrency enthusiasts. Our registered address is:",
       address: "MoonlyCoin Ltd\n100 Crypto Way, Suite 400\nRoad Town, Tortola\nBritish Virgin Islands, VG1122",
       contact: "If you have any questions about our privacy practices or this Privacy Policy, or if you wish to exercise any of your rights described herein, please contact us at:",
       contactInfo: "Email: privacy@moonlycoin.com\nContact Page: https://moonlycoin.com/contact"
