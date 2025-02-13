@@ -392,17 +392,17 @@ const Index = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/privacy" className="text-gray-400 hover:text-primary text-sm">
+                  <a href={`/${language}/privacy`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности'}
                   </a>
                 </li>
                 <li>
-                  <a href="/terms" className="text-gray-400 hover:text-primary text-sm">
+                  <a href={`/${language}/terms`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Terms of Service' : 'Условия использования'}
                   </a>
                 </li>
                 <li>
-                  <a href="/disclaimer" className="text-gray-400 hover:text-primary text-sm">
+                  <a href={`/${language}/disclaimer`} className="text-gray-400 hover:text-primary text-sm">
                     {language === 'en' ? 'Risk Disclaimer' : 'Предупреждение о рисках'}
                   </a>
                 </li>
