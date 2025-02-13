@@ -532,7 +532,7 @@ const progressCards: ProgressCard[] = [
 
 const socialLinks = [
   {
-    url: "https://t.me",
+    url: "https://t.me/moonlycoin_ai",
     icon: (
       <img 
         src="/lovable-uploads/747309a3-afe4-449d-accf-8543d9734a06.png"
@@ -542,7 +542,7 @@ const socialLinks = [
     )
   },
   {
-    url: "https://twitter.com",
+    url: "https://x.com/MoonlyCoin",
     icon: (
       <img 
         src="/lovable-uploads/dd434247-33a9-4cb9-8499-8fb776ff41e7.png"
@@ -552,7 +552,7 @@ const socialLinks = [
     )
   },
   {
-    url: "https://youtube.com",
+    url: "https://youtube.com/@moonlycoin",
     icon: (
       <img 
         src="/lovable-uploads/7d564c75-f427-4330-ad58-ee5fd3f259da.png"
@@ -562,7 +562,7 @@ const socialLinks = [
     )
   },
   {
-    url: "https://tiktok.com",
+    url: "https://www.tiktok.com/@moonlycoin",
     icon: (
       <img 
         src="/lovable-uploads/b23c29a4-38fa-48f9-a590-d3e74b733b11.png"
