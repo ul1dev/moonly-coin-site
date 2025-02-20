@@ -159,7 +159,7 @@ const Index = () => {
                                 className="bg-primary hover:bg-primary-dark"
                                 onClick={() =>
                                     window.open(
-                                        'https://t.me/moonlycoin_ai',
+                                        'https://t.me/moonly_coin',
                                         '_blank'
                                     )
                                 }
@@ -230,7 +230,7 @@ const Index = () => {
                                 className="bg-primary hover:bg-primary-dark"
                                 onClick={() =>
                                     window.open(
-                                        'https://t.me/moonlycoin_ai',
+                                        'https://t.me/moonly_coin',
                                         '_blank'
                                     )
                                 }
@@ -650,7 +650,7 @@ const progressCards: ProgressCard[] = [
 
 const socialLinks = [
     {
-        url: 'https://t.me/moonlycoin_ai',
+        url: 'https://t.me/moonly_coin',
         icon: (
             <img
                 src="/lovable-uploads/747309a3-afe4-449d-accf-8543d9734a06.png"

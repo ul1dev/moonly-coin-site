@@ -37,7 +37,7 @@ const Disclaimer = () => {
                                 className="bg-primary hover:bg-primary-dark"
                                 onClick={() =>
                                     window.open(
-                                        'https://t.me/moonlycoin_ai',
+                                        'https://t.me/moonly_coin',
                                         '_blank'
                                     )
                                 }
