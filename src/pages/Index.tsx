@@ -95,7 +95,6 @@ const Index = () => {
         Array<{ id: number; x: number; y: number }>
     >([]);
     
-    // This state will track which cards have been viewed
     const [visibleCards, setVisibleCards] = React.useState<{
         investment: boolean[];
         progress: boolean[];
@@ -290,7 +289,7 @@ const Index = () => {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={visibleCards.investment[index] ? { opacity: 1, y: 0 } : {}}
+                                animate={visibleCards.investment[index] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 whileInView={() => {
                                     if (!visibleCards.investment[index]) {
                                         setVisibleCards(prev => {
@@ -299,7 +298,7 @@ const Index = () => {
                                             return {...prev, investment: newInvestment};
                                         });
                                     }
-                                    return { opacity: 1, y: 0 };
+                                    return {};
                                 }}
                                 transition={{
                                     duration: 0.6,
@@ -372,7 +371,7 @@ const Index = () => {
                                         'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций. Когда наша рыночная капитализация достигнет 10 миллионов долларов, мы получим крупные инвестиции, чтобы сделать эту технологию ИИ доступной для всех.\n\nКаждая покупка токенов напрямую поддерживает разработку революционной технологии ИИ в криптовалютной торговле. Наши стратегические инвесторы намерены обеспечить существенную прибыль, активно поддерживая рост стоимости токенов и вознаграждая ранних инвесторов.\n\n'
                                     }
                                     <span className="text-primary font-medium">
-                                        Это только начало нашего пути к
+                                        Это только нач��ло нашего пути к
                                         революции в крипто-революции на базе ИИ.
                                     </span>
                                 </>
@@ -407,7 +406,7 @@ const Index = () => {
                             <motion.div
                                 key={card.id}
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={visibleCards.progress[index] ? { opacity: 1, y: 0 } : {}}
+                                animate={visibleCards.progress[index] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 whileInView={() => {
                                     if (!visibleCards.progress[index]) {
                                         setVisibleCards(prev => {
@@ -416,7 +415,7 @@ const Index = () => {
                                             return {...prev, progress: newProgress};
                                         });
                                     }
-                                    return { opacity: 1, y: 0 };
+                                    return {};
                                 }}
                                 transition={{
                                     duration: 0.6,
@@ -488,7 +487,7 @@ const Index = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                animate={visibleCards.social[index] ? { opacity: 1, scale: 1 } : {}}
+                                animate={visibleCards.social[index] ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                                 whileInView={() => {
                                     if (!visibleCards.social[index]) {
                                         setVisibleCards(prev => {
@@ -497,7 +496,7 @@ const Index = () => {
                                             return {...prev, social: newSocial};
                                         });
                                     }
-                                    return { opacity: 1, scale: 1 };
+                                    return {};
                                 }}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.2 }}
