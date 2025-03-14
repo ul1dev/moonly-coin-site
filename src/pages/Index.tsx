@@ -302,10 +302,8 @@ const Index = () => {
                                 animate={visibleCards.investment[index] 
                                     ? { opacity: 1, y: 0 } 
                                     : { opacity: 0, y: 20 }}
-                                whileInView={() => {
-                                    handleCardVisibility('investment', index);
-                                    return undefined;
-                                }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                onViewportEnter={() => handleCardVisibility('investment', index)}
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.1,
@@ -377,7 +375,7 @@ const Index = () => {
                                         'Наша революционная криптовалюта полностью управляется передовой нейронной сетью, разработанной нашей командой для автоматизации и оптимизации криптовалютных операций. Когда наша рыночная капитализация достигнет 10 миллионов долларов, мы получим крупные инвестиции, чтобы сделать эту технологию ИИ доступной для всех.\n\nКаждая покупка токенов напрямую поддерживает разработку революционной технологии ИИ в криптовалютной торговле. Наши стратегические инвесторы намерены обеспечить существенную прибыль, активно поддерживая рост стоимости токенов и вознаграждая ранних инвесторов.\n\n'
                                     }
                                     <span className="text-primary font-medium">
-                                        Это только нач��ло нашего пути к
+                                        Это только начало нашего пути к
                                         революции в крипто-революции на базе ИИ.
                                     </span>
                                 </>
@@ -415,10 +413,8 @@ const Index = () => {
                                 animate={visibleCards.progress[index] 
                                     ? { opacity: 1, y: 0 } 
                                     : { opacity: 0, y: 20 }}
-                                whileInView={() => {
-                                    handleCardVisibility('progress', index);
-                                    return undefined;
-                                }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                onViewportEnter={() => handleCardVisibility('progress', index)}
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.1,
@@ -492,10 +488,8 @@ const Index = () => {
                                 animate={visibleCards.social[index] 
                                     ? { opacity: 1, scale: 1 } 
                                     : { opacity: 0, scale: 0.8 }}
-                                whileInView={() => {
-                                    handleCardVisibility('social', index);
-                                    return undefined;
-                                }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                onViewportEnter={() => handleCardVisibility('social', index)}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.2 }}
                                 viewport={{ once: true }}
