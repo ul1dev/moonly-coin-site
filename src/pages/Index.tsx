@@ -144,6 +144,16 @@ const Index = () => {
         }
     };
 
+    const handleCardVisibility = (section: 'investment' | 'progress' | 'social', index: number) => {
+        if (!visibleCards[section][index]) {
+            setVisibleCards(prev => {
+                const newSection = [...prev[section]];
+                newSection[index] = true;
+                return {...prev, [section]: newSection};
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-[#0A0A0F] text-white">
             <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-primary/10">
@@ -289,16 +299,12 @@ const Index = () => {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={visibleCards.investment[index] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                animate={visibleCards.investment[index] 
+                                    ? { opacity: 1, y: 0 } 
+                                    : { opacity: 0, y: 20 }}
                                 whileInView={() => {
-                                    if (!visibleCards.investment[index]) {
-                                        setVisibleCards(prev => {
-                                            const newInvestment = [...prev.investment];
-                                            newInvestment[index] = true;
-                                            return {...prev, investment: newInvestment};
-                                        });
-                                    }
-                                    return {};
+                                    handleCardVisibility('investment', index);
+                                    return undefined;
                                 }}
                                 transition={{
                                     duration: 0.6,
@@ -406,16 +412,12 @@ const Index = () => {
                             <motion.div
                                 key={card.id}
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={visibleCards.progress[index] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                animate={visibleCards.progress[index] 
+                                    ? { opacity: 1, y: 0 } 
+                                    : { opacity: 0, y: 20 }}
                                 whileInView={() => {
-                                    if (!visibleCards.progress[index]) {
-                                        setVisibleCards(prev => {
-                                            const newProgress = [...prev.progress];
-                                            newProgress[index] = true;
-                                            return {...prev, progress: newProgress};
-                                        });
-                                    }
-                                    return {};
+                                    handleCardVisibility('progress', index);
+                                    return undefined;
                                 }}
                                 transition={{
                                     duration: 0.6,
@@ -487,16 +489,12 @@ const Index = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                animate={visibleCards.social[index] ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                                animate={visibleCards.social[index] 
+                                    ? { opacity: 1, scale: 1 } 
+                                    : { opacity: 0, scale: 0.8 }}
                                 whileInView={() => {
-                                    if (!visibleCards.social[index]) {
-                                        setVisibleCards(prev => {
-                                            const newSocial = [...prev.social];
-                                            newSocial[index] = true;
-                                            return {...prev, social: newSocial};
-                                        });
-                                    }
-                                    return {};
+                                    handleCardVisibility('social', index);
+                                    return undefined;
                                 }}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.2 }}
