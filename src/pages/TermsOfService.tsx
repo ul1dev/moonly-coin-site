@@ -25,7 +25,7 @@ const TermsOfService = () => {
                             to={`/${lang}`}
                             className="text-primary font-bold hover:opacity-80 transition-opacity"
                         >
-                            MoonlyCoin
+                            Moonly
                         </Link>
                         <div className="flex items-center gap-4">
                             <Button
@@ -33,12 +33,12 @@ const TermsOfService = () => {
                                 className="bg-primary hover:bg-primary-dark"
                                 onClick={() =>
                                     window.open(
-                                        'https://t.me/moonly_coin',
+                                        'https://t.me/MoonlyCoinBot/app',
                                         '_blank'
                                     )
                                 }
                             >
-                                {language === 'en' ? 'Invest' : 'Инвестировать'}
+                                {language === 'en' ? 'Open' : 'Открыть'}
                             </Button>
                             <button
                                 onClick={toggleLanguage}
@@ -69,8 +69,8 @@ const TermsOfService = () => {
                     </h2>
                     <p className="text-gray-300 mb-6">
                         {language === 'en'
-                            ? 'Welcome to the MoonlyCoin platform (the "Service")! By using this Service, you (hereinafter referred to as "You" or "Your") agree to be bound by these Terms of Use (the "Terms") of MoonlyCoin Ltd, a company incorporated in the British Virgin Islands (referred to as "We," "Us," or "Our"), as well as all applicable laws and regulations. If you do not agree with these Terms, you are prohibited from using the Service. All materials provided through the Service are protected by copyright and trademark laws. We reserve the right to modify these Terms at any time, and any new version will become effective upon publication. Your continued use of the Service constitutes your acceptance of the updated Terms.'
-                            : 'Добро пожаловать на платформу MoonlyCoin ("Сервис")! Используя этот Сервис, вы (далее "Вы") соглашаетесь соблюдать настоящие Условия использования ("Условия") компании MoonlyCoin Ltd, зарегистрированной на Британских Виргинских островах ("Мы"), а также все применимые законы и правила. Если вы не согласны с этими Условиями, вам запрещается использовать Сервис. Все материалы, предоставляемые через Сервис, защищены законами об авторском праве и товарных знаках. Мы оставляем за собой право изменять эти Условия в любое время, и любая новая версия вступает в силу после публикации. Продолжение использования Сервиса означает ваше согласие с обновленными Условиями.'}
+                            ? 'Welcome to the Moonly platform (the "Service")! By using this Service, you (hereinafter referred to as "You" or "Your") agree to be bound by these Terms of Use (the "Terms") of Moonly Ltd, a company incorporated in the British Virgin Islands (referred to as "We," "Us," or "Our"), as well as all applicable laws and regulations. If you do not agree with these Terms, you are prohibited from using the Service. All materials provided through the Service are protected by copyright and trademark laws. We reserve the right to modify these Terms at any time, and any new version will become effective upon publication. Your continued use of the Service constitutes your acceptance of the updated Terms.'
+                            : 'Добро пожаловать на платформу Moonly ("Сервис")! Используя этот Сервис, вы (далее "Вы") соглашаетесь соблюдать настоящие Условия использования ("Условия") компании Moonly Ltd, зарегистрированной на Британских Виргинских островах ("Мы"), а также все применимые законы и правила. Если вы не согласны с этими Условиями, вам запрещается использовать Сервис. Все материалы, предоставляемые через Сервис, защищены законами об авторском праве и товарных знаках. Мы оставляем за собой право изменять эти Условия в любое время, и любая новая версия вступает в силу после публикации. Продолжение использования Сервиса означает ваше согласие с обновленными Условиями.'}
                     </p>
 
                     <h2 className="text-xl font-semibold text-primary mb-4">
@@ -78,36 +78,35 @@ const TermsOfService = () => {
                     </h2>
                     <p className="text-gray-300 mb-6">
                         {language === 'en'
-                            ? 'The MoonlyCoin Service provides users with access to a digital platform for working with the meme coin MoonlyCoin. Specifically, the Service allows you to:'
-                            : 'Сервис MoonlyCoin предоставляет пользователям доступ к цифровой платформе для работы с мем-койном MoonlyCoin. В частности, Сервис позволяет:'}
+                            ? 'The Moonly Service provides users with access to a digital platform for working with the meme coin Moonly. Specifically, the Service allows you to:'
+                            : 'Сервис Moonly предоставляет пользователям доступ к цифровой платформе для работы с мем-койном Moonly. В частности, Сервис позволяет:'}
                     </p>
                     <ul className="list-disc pl-6 text-gray-300 mb-6">
                         {language === 'en' ? (
                             <>
                                 <li>
                                     Create and manage digital wallets. Users can
-                                    store, transfer, and exchange MoonlyCoin
-                                    using the platform's user-friendly
-                                    interface.
+                                    store, transfer, and exchange Moonly using
+                                    the platform's user-friendly interface.
                                 </li>
                                 <li>
                                     Conduct transactions. The Service
-                                    facilitates operations with MoonlyCoin using
+                                    facilitates operations with Moonly using
                                     state-of-the-art blockchain technology.
                                 </li>
                                 <li>
                                     Access up-to-date information. Users can
                                     receive news, updates, and notifications
-                                    about the development of the MoonlyCoin
-                                    project, as well as information on
-                                    promotions, reward programs, and voting.
+                                    about the development of the Moonly project,
+                                    as well as information on promotions, reward
+                                    programs, and voting.
                                 </li>
                                 <li>
                                     Integrate with other services. Where
                                     available, third-party applications and
                                     partner platforms may allow you to use your
-                                    MoonlyCoin account for authentication and
-                                    access additional features.
+                                    Moonly account for authentication and access
+                                    additional features.
                                 </li>
                             </>
                         ) : (
@@ -115,18 +114,18 @@ const TermsOfService = () => {
                                 <li>
                                     Создавать и управлять цифровыми кошельками.
                                     Пользователи могут хранить, переводить и
-                                    обменивать MoonlyCoin, используя удобный
+                                    обменивать Moonly, используя удобный
                                     интерфейс платформы.
                                 </li>
                                 <li>
                                     Проводить транзакции. Сервис обеспечивает
-                                    операции с MoonlyCoin, используя современную
+                                    операции с Moonly, используя современную
                                     технологию блокчейн.
                                 </li>
                                 <li>
                                     Получать актуальную информацию. Пользователи
                                     могут получать новости, обновления и
-                                    уведомления о развитии проекта MoonlyCoin, а
+                                    уведомления о развитии проекта Moonly, а
                                     также информацию о акциях, программах
                                     вознаграждений и голосованиях.
                                 </li>
@@ -134,7 +133,7 @@ const TermsOfService = () => {
                                     Интегрироваться с другими сервисами. Где это
                                     доступно, сторонние приложения и
                                     платформы-партнеры могут позволить
-                                    использовать ваш аккаунт MoonlyCoin для
+                                    использовать ваш аккаунт Moonly для
                                     аутентификации и доступа к дополнительным
                                     функциям.
                                 </li>
@@ -300,8 +299,8 @@ const TermsOfService = () => {
                     </h2>
                     <p className="text-gray-300 mb-2">
                         {language === 'en'
-                            ? 'All content, design, software, and other materials available through the Service are the property of MoonlyCoin Ltd, its licensors, or other rights holders and are protected by applicable copyright, trademark, patent, and other laws. Without our prior written consent, you are prohibited from:'
-                            : 'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью MoonlyCoin Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменного согласия вам запрещается:'}
+                            ? 'All content, design, software, and other materials available through the Service are the property of Moonly Ltd, its licensors, or other rights holders and are protected by applicable copyright, trademark, patent, and other laws. Without our prior written consent, you are prohibited from:'
+                            : 'Весь контент, дизайн, программное обеспечение и другие материалы, доступные через Сервис, являются собственностью Moonly Ltd, ее лицензиаров или других правообладателей и защищены применимыми законами об авторском праве, товарных знаках, патентах и других законах. Без нашего предварительного письменного согласия вам запрещается:'}
                     </p>
                     <ul className="list-disc pl-6 text-gray-300 mb-6">
                         {language === 'en' ? (
@@ -466,7 +465,7 @@ const TermsOfService = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         <div>
                             <h3 className="text-lg font-semibold text-white mb-4">
-                                MoonlyCoin
+                                Moonly
                             </h3>
                             <p className="text-gray-400 text-sm">
                                 {language === 'en'
@@ -524,7 +523,7 @@ const TermsOfService = () => {
                     </div>
                     <div className="mt-8 pt-8 border-t border-primary/10 text-center">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} MoonlyCoin
+                            © {new Date().getFullYear()} Moonly
                         </p>
                         <p className="text-gray-400 text-sm mt-1">
                             {language === 'en'

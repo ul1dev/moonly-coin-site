@@ -29,7 +29,7 @@ const Disclaimer = () => {
                             to={`/${lang}`}
                             className="text-primary font-bold hover:opacity-80 transition-opacity"
                         >
-                            MoonlyCoin
+                            Moonly
                         </Link>
                         <div className="flex items-center gap-4">
                             <Button
@@ -37,12 +37,12 @@ const Disclaimer = () => {
                                 className="bg-primary hover:bg-primary-dark"
                                 onClick={() =>
                                     window.open(
-                                        'https://t.me/moonly_coin',
+                                        'https://t.me/MoonlyCoinBot/app',
                                         '_blank'
                                     )
                                 }
                             >
-                                {language === 'en' ? 'Invest' : 'Инвестировать'}
+                                {language === 'en' ? 'Open' : 'Открыть'}
                             </Button>
                             <button
                                 onClick={toggleLanguage}
@@ -87,7 +87,7 @@ const Disclaimer = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         <div>
                             <h3 className="text-lg font-semibold text-white mb-4">
-                                MoonlyCoin
+                                Moonly
                             </h3>
                             <p className="text-gray-400 text-sm">
                                 {language === 'en'
@@ -145,7 +145,7 @@ const Disclaimer = () => {
                     </div>
                     <div className="mt-8 pt-8 border-t border-primary/10 text-center">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} MoonlyCoin
+                            © {new Date().getFullYear()} Moonly
                         </p>
                         <p className="text-gray-400 text-sm mt-1">
                             {language === 'en'
