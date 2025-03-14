@@ -94,6 +94,17 @@ const Index = () => {
     const [dots, setDots] = React.useState<
         Array<{ id: number; x: number; y: number }>
     >([]);
+    
+    // This state will track which cards have been viewed
+    const [visibleCards, setVisibleCards] = React.useState<{
+        investment: boolean[];
+        progress: boolean[];
+        social: boolean[];
+    }>({
+        investment: Array(investmentStages.length).fill(false),
+        progress: Array(progressCards.length).fill(false),
+        social: Array(socialLinks.length).fill(false),
+    });
 
     React.useEffect(() => {
         navigate(`/${language}`, { replace: true });
@@ -279,11 +290,22 @@ const Index = () => {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={visibleCards.investment[index] ? { opacity: 1, y: 0 } : {}}
+                                whileInView={() => {
+                                    if (!visibleCards.investment[index]) {
+                                        setVisibleCards(prev => {
+                                            const newInvestment = [...prev.investment];
+                                            newInvestment[index] = true;
+                                            return {...prev, investment: newInvestment};
+                                        });
+                                    }
+                                    return { opacity: 1, y: 0 };
+                                }}
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.1,
                                 }}
+                                viewport={{ once: true }}
                                 className="bg-[#12121A] p-6 rounded-xl border border-primary/10 backdrop-blur-lg min-h-[300px] flex flex-col justify-between"
                             >
                                 <div className="flex-1">
@@ -366,6 +388,7 @@ const Index = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
                         className="text-center"
                     >
                         <h2 className="text-4xl font-bold text-white">
@@ -384,11 +407,22 @@ const Index = () => {
                             <motion.div
                                 key={card.id}
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={visibleCards.progress[index] ? { opacity: 1, y: 0 } : {}}
+                                whileInView={() => {
+                                    if (!visibleCards.progress[index]) {
+                                        setVisibleCards(prev => {
+                                            const newProgress = [...prev.progress];
+                                            newProgress[index] = true;
+                                            return {...prev, progress: newProgress};
+                                        });
+                                    }
+                                    return { opacity: 1, y: 0 };
+                                }}
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.1,
                                 }}
+                                viewport={{ once: true }}
                             >
                                 <Card className="bg-[#12121A] border-primary/10 p-6 h-[200px] flex flex-col">
                                     <div className="flex items-start justify-between flex-1">
@@ -432,6 +466,7 @@ const Index = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
                         className="text-center"
                     >
                         <h2 className="text-4xl font-bold text-white">
@@ -453,9 +488,20 @@ const Index = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                animate={visibleCards.social[index] ? { opacity: 1, scale: 1 } : {}}
+                                whileInView={() => {
+                                    if (!visibleCards.social[index]) {
+                                        setVisibleCards(prev => {
+                                            const newSocial = [...prev.social];
+                                            newSocial[index] = true;
+                                            return {...prev, social: newSocial};
+                                        });
+                                    }
+                                    return { opacity: 1, scale: 1 };
+                                }}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.2 }}
+                                viewport={{ once: true }}
                                 className="w-14 h-14 flex items-center justify-center bg-[#12121A] rounded-full shadow-lg border border-primary/10"
                             >
                                 {link.icon}
